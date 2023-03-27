@@ -70,5 +70,10 @@ AWS GuardDuty
 ![image](https://user-images.githubusercontent.com/36766101/227874963-dc382307-31ae-4b12-b5d9-20d44fd19ce3.png)
 ![image](https://user-images.githubusercontent.com/36766101/227875390-df86fdd7-eb30-44f9-b03d-d4df1c624275.png)
 ![image](https://user-images.githubusercontent.com/36766101/227893648-a1114a15-49f9-404c-9056-bd8ff8169a66.png)
+![image](https://user-images.githubusercontent.com/36766101/227897863-63c2412f-b9b7-4603-b949-038192bcbbae.png)
+![image](https://user-images.githubusercontent.com/36766101/227898903-bf1b35f5-8320-4310-be7f-988f3ec26222.png)
+![image](https://user-images.githubusercontent.com/36766101/227900963-5e3b485d-0dbf-4995-860f-eb00e821c1b9.png)
+![image](https://user-images.githubusercontent.com/36766101/227901833-56fd6c25-71a1-4259-943f-a3fe53247d2a.png)
+![image](https://user-images.githubusercontent.com/36766101/227901984-bcc1fe21-f15a-4bb4-90f8-7e07a871214a.png)
 
 

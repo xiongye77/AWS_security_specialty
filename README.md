@@ -24,6 +24,7 @@ AWS GuardDuty
 AWS EC2 Inspector vulnerability finding
 ![image](https://user-images.githubusercontent.com/36766101/228137026-58970b36-debc-4680-8262-0ac40b1b0928.png)
 ![image](https://user-images.githubusercontent.com/36766101/228137592-07b393c3-aa92-4b6f-8f0b-e9c4707b651d.png)
+![image](https://user-images.githubusercontent.com/36766101/228203313-a8161495-5dff-4abf-bf75-78b713dfd6f1.png)
 
 AWS EC2 SSM run command to remove comprised public key
 ![image](https://user-images.githubusercontent.com/36766101/228142280-ffe2b94c-f411-40a9-bf11-232c597d6fb7.png)

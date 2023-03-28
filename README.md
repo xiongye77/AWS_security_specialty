@@ -21,7 +21,17 @@ AWS configure aggregator
 AWS GuardDuty
 ![image](https://user-images.githubusercontent.com/36766101/227827505-cfe4527e-0ef7-415e-9be8-fce99ed1f44a.png)
 
+AWS EC2 Inspector vulnerability finding
+![image](https://user-images.githubusercontent.com/36766101/228137026-58970b36-debc-4680-8262-0ac40b1b0928.png)
+![image](https://user-images.githubusercontent.com/36766101/228137592-07b393c3-aa92-4b6f-8f0b-e9c4707b651d.png)
 
+AWS EC2 SSM run command to remove comprised public key
+![image](https://user-images.githubusercontent.com/36766101/228142280-ffe2b94c-f411-40a9-bf11-232c597d6fb7.png)
+
+
+AWS Abuse example
+![image](https://user-images.githubusercontent.com/36766101/228146375-9fc94161-7f58-4f41-bff8-d1d567ac1c7a.png)
+![image](https://user-images.githubusercontent.com/36766101/228146504-52789c9e-4488-4a0b-a8db-338a7d9fc179.png)
 
 
 ![image](https://user-images.githubusercontent.com/36766101/227846695-fc778dc3-2dcd-49ab-9997-0b131480dc7d.png)

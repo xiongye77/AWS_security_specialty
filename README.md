@@ -34,6 +34,10 @@ AWS Abuse example
 ![image](https://user-images.githubusercontent.com/36766101/228146375-9fc94161-7f58-4f41-bff8-d1d567ac1c7a.png)
 ![image](https://user-images.githubusercontent.com/36766101/228146504-52789c9e-4488-4a0b-a8db-338a7d9fc179.png)
 
+AWS KMS delete key
+![image](https://user-images.githubusercontent.com/36766101/228386747-395617d1-1a28-417e-8395-66226702bd91.png)
+![image](https://user-images.githubusercontent.com/36766101/228386901-bd6744cf-392c-4065-9399-aa3f57760a86.png)
+
 
 ![image](https://user-images.githubusercontent.com/36766101/227846695-fc778dc3-2dcd-49ab-9997-0b131480dc7d.png)
 ![image](https://user-images.githubusercontent.com/36766101/227846783-f0bb06db-439c-4ce2-bc56-967d940ae2c1.png)

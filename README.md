@@ -38,6 +38,13 @@ AWS KMS delete key
 ![image](https://user-images.githubusercontent.com/36766101/228386747-395617d1-1a28-417e-8395-66226702bd91.png)
 ![image](https://user-images.githubusercontent.com/36766101/228386901-bd6744cf-392c-4065-9399-aa3f57760a86.png)
 
+AWS KMS multiple-region key
+![image](https://user-images.githubusercontent.com/36766101/228702878-860b4f25-5589-45f5-b004-d12121632dfe.png)
+![image](https://user-images.githubusercontent.com/36766101/228702721-5682e7a9-0732-4a12-8aec-c6e51f6bb27d.png)
+
+AWS S3 server side encryption (SSE-C, SSE-S3(AES)，SSE-KMS )
+![image](https://user-images.githubusercontent.com/36766101/228707965-c80dc3b1-9970-4035-aaa0-8f52e4e6519b.png)
+![image](https://user-images.githubusercontent.com/36766101/228710389-20a077d6-da89-4b74-b5ad-242c2354f71c.png)
 
 ![image](https://user-images.githubusercontent.com/36766101/227846695-fc778dc3-2dcd-49ab-9997-0b131480dc7d.png)
 ![image](https://user-images.githubusercontent.com/36766101/227846783-f0bb06db-439c-4ce2-bc56-967d940ae2c1.png)

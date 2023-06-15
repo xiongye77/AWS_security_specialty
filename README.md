@@ -100,5 +100,13 @@ AWS S3 server side encryption (SSE-C, SSE-S3(AES)，SSE-KMS )
 ![image](https://user-images.githubusercontent.com/36766101/229417166-c44890c1-ba99-4f26-b75a-280491f09b08.png)
 ![image](https://user-images.githubusercontent.com/36766101/229417655-285069ce-b639-426d-8c86-a1eea0ead4b1.png)
 ![image](https://user-images.githubusercontent.com/36766101/229417887-cd893b08-4d2b-4cac-b614-6c4518c772d4.png)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/7b09c645-806b-4cec-9908-910396d84f14)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/5f1081c0-6d7c-4664-942f-4fe344f785ee)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/f002afac-2ee5-4b27-9840-5c34c8495387)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/221ab7d5-dfa9-44ef-b7c7-5b9c7324f007)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/f446c352-82ba-48c6-8fc2-6fa41e3c011e)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/d05fb141-ab77-4455-86e9-9697d43085f0)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/f361d1bb-f887-47a0-a60d-83f419503021)
+![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/e61b7285-e83c-47a2-885b-5e67cdc068cc)
 
 

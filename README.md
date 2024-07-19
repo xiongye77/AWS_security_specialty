@@ -9,6 +9,10 @@
 ![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/f5888b49-45d9-44d4-ac73-b83a856f0782)
 ![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/1cd92aef-2107-4466-b662-cbe31c1a430e)
 
+![image](https://github.com/user-attachments/assets/f4b1caba-831b-47a1-93cb-bd5d2f4804a8)
+![image](https://github.com/user-attachments/assets/337275c9-c753-47fe-a9d8-38b9569244a5)
+![image](https://github.com/user-attachments/assets/8d4ba70b-4abe-47f4-8f03-5b9a89e36425)
+
 
 # 2 Logging and Monitoring Domain
 ![image](https://user-images.githubusercontent.com/36766101/227768029-9bdda751-353b-4c7a-a4d2-e2843ce15685.png)

@@ -14,6 +14,18 @@
 ![image](https://github.com/user-attachments/assets/8d4ba70b-4abe-47f4-8f03-5b9a89e36425)
 
 
+# ACM public certificate or private certificate 
+
+![image](https://github.com/user-attachments/assets/fcde4afe-bb2f-4454-bfe1-a0ac19db837a)
+While the primary use case of ACM is to provide SSL/TLS certificates for public and private websites, it also offers a valuable feature called AWS Private CA (previously ACM Private CA). 
+![image](https://github.com/user-attachments/assets/abb8f603-063a-407a-9224-76f443f78cd3)
+
+![image](https://github.com/user-attachments/assets/ec4facb2-50e3-4710-9e98-e2f926c4c6d4)
+![image](https://github.com/user-attachments/assets/241de2a1-60bc-4cde-ae93-6fc4d19e95a1)
+A private CA in ACM provides a dedicated and controlled environment for generating and maintaining digital certificates, ensuring the confidentiality and integrity of sensitive data transmissions. This service allows users to issue and manage certificates for internal resources, applications, and devices, providing a robust security layer within the AWS ecosystem. By leveraging private CAs in ACM, not only can users establish trust within their infrastructure, encrypt communications, and enhance overall data protection, but they can also confidently manage their certificate life cycle, streamline security practices, and meet compliance requirements, even for complex and dynamic cloud environments.
+
+
+
 # 2 Logging and Monitoring Domain
 ![image](https://user-images.githubusercontent.com/36766101/227768029-9bdda751-353b-4c7a-a4d2-e2843ce15685.png)
 ![image](https://user-images.githubusercontent.com/36766101/227768427-31696707-efe4-482e-90fe-2c23ed9448d5.png)

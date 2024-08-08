@@ -1,5 +1,16 @@
 # AWS_security_specialty
 
+# Cognito user pool and identity pool
+
+![image](https://github.com/user-attachments/assets/2d49fe29-dd13-4a98-bf3c-fb45f066b1a4)
+![image](https://github.com/user-attachments/assets/6298c9a0-9eb2-4fd3-b69d-5331a393a526)
+![image](https://github.com/user-attachments/assets/ed255cf9-dcfe-4030-bbd4-9d07cab6e04c)
+![image](https://github.com/user-attachments/assets/f032a01f-1617-4e6a-980a-1f005714d35a)
+![image](https://github.com/user-attachments/assets/55c7f914-794e-4478-b21b-1572fd7a3c8e)
+
+
+# SAML IdP
+![image](https://github.com/user-attachments/assets/a7f96b3e-5da8-4f07-9fb0-2f60bb17980d)
 
 ![image](https://github.com/xiongye77/AWS_security_specialty/assets/36766101/592bcba6-170a-417a-a5f9-ff3b124a9e34)
 

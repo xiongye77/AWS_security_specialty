@@ -1,5 +1,27 @@
 # AWS_security_specialty
 
+
+<img width="894" alt="image" src="https://github.com/user-attachments/assets/d0c682d5-8d10-41a0-a8f7-e450d543aa5a">
+<img width="920" alt="image" src="https://github.com/user-attachments/assets/3458b26d-9b02-451c-a8e1-72e5b5747cf8">
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/d6b84c2e-378b-4b45-be62-9855d351cdbf">
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/a4aa7a13-bb51-44b1-80a4-c3605f77092e">
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/24fd9e25-8be7-4e24-8387-b08bc45d06e1">
+<img width="856" alt="image" src="https://github.com/user-attachments/assets/7cf22cec-3fdc-4124-b627-706ddda62970">
+<img width="868" alt="image" src="https://github.com/user-attachments/assets/c210b8ee-a68c-4d8e-a8ea-4d5fda10e4ea">
+<img width="867" alt="image" src="https://github.com/user-attachments/assets/97d2eb7c-b5d7-4cbf-af91-0c36cf3ebf45">
+<img width="941" alt="image" src="https://github.com/user-attachments/assets/c77f0fb0-38f9-472b-b3eb-db2e1a410132">
+<img width="930" alt="image" src="https://github.com/user-attachments/assets/4b59d742-530c-4296-819f-46af47855acd">
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/f1e5115b-a9c9-4195-9a1e-6cfc65dc42d4">
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/f295b2db-0287-4a4a-899c-9e6f820d2627">
+<img width="928" alt="image" src="https://github.com/user-attachments/assets/8c1fc221-b6de-4422-b67d-5f82ebffa0bb">
+<img width="881" alt="image" src="https://github.com/user-attachments/assets/4e49449e-7be3-42b1-8c35-2ee1c44fd345">
+<img width="934" alt="image" src="https://github.com/user-attachments/assets/8ac73596-4bd1-44aa-855e-0283cd53b09c">
+<img width="972" alt="image" src="https://github.com/user-attachments/assets/75ebc199-182d-4bd4-af29-dd09e64e9d95">
+<img width="899" alt="image" src="https://github.com/user-attachments/assets/86737075-40bf-41fd-9555-cf6609f3a544">
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/252bc0e2-a64f-4eef-8f39-60667fff0ed0">
+
+
+
 # Cognito user pool and identity pool
 
 ![image](https://github.com/user-attachments/assets/2d49fe29-dd13-4a98-bf3c-fb45f066b1a4)

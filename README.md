@@ -48,6 +48,36 @@
 <img width="731" alt="image" src="https://github.com/user-attachments/assets/320e1cbc-642b-481b-91a2-bb7c6295fe1c">
 
 
+
+<img width="933" alt="image" src="https://github.com/user-attachments/assets/6fe74b05-7fbf-4a3e-814a-55007a957b04">
+<img width="890" alt="image" src="https://github.com/user-attachments/assets/cec069e9-eda4-4e9c-9e41-4bdbb0ec3ab6">
+<img width="893" alt="image" src="https://github.com/user-attachments/assets/8301d2fa-a870-4f19-9f6d-e7b09a7b0023">
+<img width="882" alt="image" src="https://github.com/user-attachments/assets/dabed771-6d78-496c-99c2-fbaf97440a79">
+<img width="1006" alt="image" src="https://github.com/user-attachments/assets/9b80eab3-7b05-4eaf-9978-c2b22ee36948">
+<img width="716" alt="image" src="https://github.com/user-attachments/assets/35cfc79e-65c0-4f1e-bda5-91c00ad81609">
+<img width="639" alt="image" src="https://github.com/user-attachments/assets/41b42d7b-17aa-4339-9693-3094f1098e0b">
+<img width="898" alt="image" src="https://github.com/user-attachments/assets/e10f0c6a-d1d1-4612-b52c-f9dd86578b56">
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/7951a510-5a59-42cd-88b0-7bb88ee4157b">
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/ce1ee32e-9bc6-44bd-96fc-29c18fe5b804">
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/3d4eb079-2094-43d6-84c1-15c8cd7699f0">
+
+
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/9ebbc0d8-70bf-4acc-97a9-c5ed6de21bb6">
+<img width="885" alt="image" src="https://github.com/user-attachments/assets/40c1425b-5362-4bab-934c-28dbf7e53e95">
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/0fc4149c-2fc2-4634-bb85-f73e83555b4f">
+<img width="869" alt="image" src="https://github.com/user-attachments/assets/f98c4c4c-36cc-4cf2-aacb-0f679c84f0cb">
+
+<img width="916" alt="image" src="https://github.com/user-attachments/assets/7c23ceab-5eea-4666-a6d0-ecd7b65c5b04">
+
+<img width="747" alt="image" src="https://github.com/user-attachments/assets/a08975ca-7538-4a9d-a6f1-b537a0041dca">
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/14b3087e-5849-4d41-bf9e-0ec131cab4da">
+<img width="577" alt="image" src="https://github.com/user-attachments/assets/e79b3f75-5070-40cf-b81a-02ce7f6e5dc1">
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/e5562be9-cfe8-4b07-82ab-fbd62722cfdc">
+<img width="648" alt="image" src="https://github.com/user-attachments/assets/3fed5b38-49ef-4548-b19b-cf57a2f1012e">
+<img width="866" alt="image" src="https://github.com/user-attachments/assets/12fe1a2f-06aa-43b7-9fc4-17fd7b96adbf">
+
+
 # Cognito user pool and identity pool
 
 ![image](https://github.com/user-attachments/assets/2d49fe29-dd13-4a98-bf3c-fb45f066b1a4)

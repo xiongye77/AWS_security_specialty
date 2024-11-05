@@ -78,6 +78,18 @@
 <img width="866" alt="image" src="https://github.com/user-attachments/assets/12fe1a2f-06aa-43b7-9fc4-17fd7b96adbf">
 
 
+
+
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/6d7ff5c0-c34d-4b13-bc39-bd15feab92d6">
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/805ff606-3882-4eba-8b17-1bb73df91e3d">
+<img width="1595" alt="image" src="https://github.com/user-attachments/assets/a1768224-7642-4270-96a7-e2d3d1d9ca3c">
+<img width="1593" alt="image" src="https://github.com/user-attachments/assets/70910111-c7f3-4656-9175-4019367b6722">
+<img width="1625" alt="image" src="https://github.com/user-attachments/assets/03334132-df55-4d6f-9a2b-8a614d8c9487">
+<img width="1658" alt="image" src="https://github.com/user-attachments/assets/6e8ce4c6-155a-42d6-9a0a-34854dc997c7">
+<img width="1528" alt="image" src="https://github.com/user-attachments/assets/c7b00c3f-8541-4619-8a3c-da5fe751fa03">
+<img width="552" alt="image" src="https://github.com/user-attachments/assets/c433187e-a4f7-4ccc-a1f9-4522aa5ed1aa">
+
+
 # Cognito user pool and identity pool
 
 ![image](https://github.com/user-attachments/assets/2d49fe29-dd13-4a98-bf3c-fb45f066b1a4)
@@ -88,6 +100,15 @@
 
 for a mobile application. In this situation, you can leverage Amazon Cognito identity pools to obtain temporary AWS credentials to access the AWS services or resources you need. Cognito identity pools act as an identity federation mechanism to exchange the credentials that you provide, either from AWS or third-party identity providers (including social identity providers such as Google, Apple, Amazon, etc.), in the form of an OIDC token or a SAML assertion with temporary AWS credentials.
 
+# DNS spoofing protection 
+<img width="1579" alt="image" src="https://github.com/user-attachments/assets/0979b081-a441-4ae9-b6c1-bf815e9cf6d6">
+<img width="1553" alt="image" src="https://github.com/user-attachments/assets/9ceb008d-4b5f-412f-a5d3-2cb1e83b4fa0">
+<img width="1613" alt="image" src="https://github.com/user-attachments/assets/008c6156-865b-43d3-962c-3ae9052855c1">
+
+# AWS WAF protect only regional API Gateway, for edge optimized one, create a custom CloudFront distribution in front of your API Gateway
+<img width="517" alt="image" src="https://github.com/user-attachments/assets/86895c35-ea64-4e38-bc7d-0391732712f0">
+<img width="1531" alt="image" src="https://github.com/user-attachments/assets/f2d3d702-dcfd-4093-9798-cd210640220f">
+<img width="609" alt="image" src="https://github.com/user-attachments/assets/9c5fe184-2f6e-4b22-ba94-318500515bff">
 
 
 # AWS Shield

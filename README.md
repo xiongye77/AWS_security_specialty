@@ -1,5 +1,39 @@
 # AWS_security_specialty
 
+<img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
+<img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">
+<img width="579" alt="image" src="https://github.com/user-attachments/assets/e47d6024-6590-4a55-914a-18212afbd776">
+<img width="1119" alt="image" src="https://github.com/user-attachments/assets/bf4d8d1a-2563-4b38-97ff-b2d7e9fad0fe">
+<img width="667" alt="image" src="https://github.com/user-attachments/assets/1ece9934-cdbd-4163-a6f0-02de91ca7701">
+<img width="1119" alt="image" src="https://github.com/user-attachments/assets/e2fa6164-34a8-4caa-a16d-aad8787a2b8b">
+<img width="1119" alt="image" src="https://github.com/user-attachments/assets/b420809e-3d30-478f-a494-41116e1442ed">
+<img width="1106" alt="image" src="https://github.com/user-attachments/assets/5166e90e-3bc6-401a-882c-d76f7b469bb2">
+<img width="1101" alt="image" src="https://github.com/user-attachments/assets/f011b442-6efc-4225-8ba7-e46ee1e777fa">
+<img width="1116" alt="image" src="https://github.com/user-attachments/assets/2ea5b215-4096-465a-a478-872fe7a0eb76">
+<img width="1094" alt="image" src="https://github.com/user-attachments/assets/12751c0b-136e-4145-b560-6303f70d3cdb">
+<img width="652" alt="image" src="https://github.com/user-attachments/assets/951be51b-cbcf-4edc-9385-6ce27f2e33b3">
+<img width="1111" alt="image" src="https://github.com/user-attachments/assets/9f7aa142-7dce-4b37-9662-b39423a335fd">
+<img width="561" alt="image" src="https://github.com/user-attachments/assets/7fcd73b6-8af6-4813-b2e4-a4657efa5787">
+
+<img width="1107" alt="image" src="https://github.com/user-attachments/assets/3be9e8e5-937a-4723-a3c4-6d2a9caaf4b3">
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/adc60e58-ceba-4665-aebf-3be8f6e7a947">
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/59e64282-3458-4ea0-baa2-81b8d60a4262">
+<img width="1188" alt="image" src="https://github.com/user-attachments/assets/71cfef92-271f-4cc5-a89a-cd8d74e1a927">
+<img width="774" alt="image" src="https://github.com/user-attachments/assets/09c42f71-b0fb-4692-9a9c-d920f23bff68">
+<img width="774" alt="image" src="https://github.com/user-attachments/assets/09c42f71-b0fb-4692-9a9c-d920f23bff68">
+<img width="636" alt="image" src="https://github.com/user-attachments/assets/0051e902-7e09-4c73-8920-54d7246decda">
+<img width="1110" alt="image" src="https://github.com/user-attachments/assets/4540391c-389f-4df0-b027-43f960372707">
+<img width="1129" alt="image" src="https://github.com/user-attachments/assets/39152892-99d8-4fdb-b5b9-da8782241fc6">
+<img width="1115" alt="image" src="https://github.com/user-attachments/assets/0c0ba79d-a3b1-40f1-a60b-a44b7f356e82">
+<img width="621" alt="image" src="https://github.com/user-attachments/assets/43f010e2-0337-4d39-8afe-076e24f47742">
+<img width="1113" alt="image" src="https://github.com/user-attachments/assets/240276f4-bbef-42e4-8c1d-bdd431911e1c">
+<img width="1112" alt="image" src="https://github.com/user-attachments/assets/6edb4fab-178f-4611-9a28-26d086827f13">
+<img width="1140" alt="image" src="https://github.com/user-attachments/assets/d03cd415-95b6-459b-aab9-1744263567a2">
+<img width="1154" alt="image" src="https://github.com/user-attachments/assets/3085b26e-fb90-4eeb-91b7-adf00fb77707">
+
+
+
 
 <img width="894" alt="image" src="https://github.com/user-attachments/assets/d0c682d5-8d10-41a0-a8f7-e450d543aa5a">
 <img width="920" alt="image" src="https://github.com/user-attachments/assets/3458b26d-9b02-451c-a8e1-72e5b5747cf8">

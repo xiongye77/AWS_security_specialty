@@ -166,6 +166,12 @@
 <img width="552" alt="image" src="https://github.com/user-attachments/assets/c433187e-a4f7-4ccc-a1f9-4522aa5ed1aa">
 
 
+<img width="1121" alt="image" src="https://github.com/user-attachments/assets/47cc9d22-281c-4508-93e8-089885cfd5b5">
+<img width="1101" alt="image" src="https://github.com/user-attachments/assets/4bff8641-e3b5-403f-81d7-009741cfe09a">
+<img width="1109" alt="image" src="https://github.com/user-attachments/assets/a320eb5b-87f1-4620-81e9-65305421e5c4">
+<img width="1115" alt="image" src="https://github.com/user-attachments/assets/76627618-3405-4584-ae9d-410eb6f4dbac">
+
+
 # Cognito user pool and identity pool
 
 ![image](https://github.com/user-attachments/assets/2d49fe29-dd13-4a98-bf3c-fb45f066b1a4)

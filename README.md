@@ -1,5 +1,236 @@
 # AWS_security_specialty
 
+
+Q1. An application outputs logs to a text file. The logs must be continuously monitored for security incidents.Which design will meet the requirements with MINIMUM effort?
+A. Create a scheduled process to copy the component's logs into Amazon S3.
+Use S3 events to trigger a Lambda function that updates Amazon CloudWatch metrics with the log data. Set upCloudWatch alerts based on the metrics.
+B. Install and configure the Amazon CloudWatch Logs agent on the application's EC2 instance.
+Create a CloudWatch metric filter to monitor the application logs.
+Set up CloudWatch alerts based on the metrics.
+C. Create a scheduled process to copy the application log files to AWS CloudTrail.
+Use S3 events to trigger Lambda functions that update CloudWatch metrics with the log data.
+Set up CloudWatch alerts based on the metrics.
+D. Create a file watcher that copies data to Amazon Kinesis when the application writes to the log file.
+Have Kinesis trigger a Lambda function to update Amazon CloudWatch metrics with the log data.
+Set up CloudWatch alerts based on the metrics.
+
+Q2. The Security Engineer for a mobile game has to implement a method to authenticate users so that they cansave their progress. Because most of the users are part of the same OpenID- Connect compatible social mediawebsite, the Security Engineer would like to use that as the identity provider.
+Which solution is the SIMPLEST way to allow the authentication of users using their social media identities?
+A. Amazon Cognito
+B. AssumeRoleWithWebIdentity API
+C. Amazon Cloud Directory
+D. Active Directory (AD) Connector
+
+
+
+
+Q3. A Security Engineer has been asked to troubleshoot inbound connectivity to a web server. This single webserver is not receiving inbound connections from the internet, whereas all other web servers are functioningproperly.
+The architecture includes network ACLs, security groups, and a virtual security appliance. In addition, theDevelopment team has implemented Application Load Balancers (ALBs) to distribute the load across all webservers. It is a requirement that traffic between the web servers and the internet flow through the virtual securityappliance.
+The Security Engineer has verified the following:
+1. The rule set in the Security Groups is correct
+2. The rule set in the network ACLs is correct
+3. The rule set in the virtual appliance is correct
+Which of the following are other valid items to troubleshoot in this scenario? (Choose two.)
+A. Verify that the 0.0.0.0/0 route in the route table for the web server subnet points to a NAT gateway.
+B. Verify which Security Group is applied to the particular web server's elastic network interface (ENI).
+C. Verify that the 0.0.0.0/0 route in the route table for the web server subnet points to the virtual securityappliance.
+D. Verify the registered targets in the ALB.
+E. Verify that the 0.0.0.0/0 route in the public subnet points to a NAT gateway.
+
+
+Q4. Which approach will generate automated security alerts should too many unauthorized AWS API requests be identified?
+A. Create an Amazon CloudWatch metric filter that looks for API call error codes and then implement an alarm based on that metric's rate.
+B. Configure AWS CloudTrail to stream event data to Amazon Kinesis. Configure an AWS Lambda function on thestream to alarm when the threshold has been exceeded.
+C. Run an Amazon Athena SQL query against CloudTrail log files. Use Amazon QuickSight to create anoperational dashboard.
+D. Use the Amazon Personal Health Dashboard to monitor the account's use of AWS services, and raise an alertif service error rates increase.
+
+
+
+Q5. A company has multiple production AWS accounts. Each account has AWS CloudTrail configured to log to asingle Amazon S3 bucket in a central account. Two of the production accounts have trails that are not logginganything to the S3 bucket.
+Which steps should be taken to troubleshoot the issue? (Choose three.)
+A. Verify that the log file prefix is set to the name of the S3 bucket where the logs should go.
+B. Verify that the S3 bucket policy allows access for CloudTrail from the production AWS account IDs.
+C. Create a new CloudTrail configuration in the account, and configure it to log to the account's S3 bucket.
+D. Confirm in the CloudTrail Console that each trail is active and healthy.
+E. Open the global CloudTrail configuration in the master account, and verify that the storage location is set to the correct S3 bucket.
+F. Confirm in the CloudTrail Console that the S3 bucket name is set correctly.
+
+
+
+
+
+Q6. Amazon CloudWatch Logs agent is successfully delivering logs to the CloudWatch Logs service. However,logs stop being delivered after the associated log stream has been active for a specific number of hours.What steps are necessary to identify the cause of this phenomenon? (Choose two.)
+A. Ensure that file permissions for monitored files that allow the CloudWatch Logs agent to read the file have notbeen modified.
+B. Verify that the OS Log rotation rules are compatible with the configuration requirements for agent streaming.
+C. Configure an Amazon Kinesis producer to first put the logs into Amazon Kinesis Streams.
+D. Create a CloudWatch Logs metric to isolate a value that changes at least once during the period before logging stops.
+E. Use AWS CloudFormation to dynamically create and maintain the configuration file for the CloudWatch Logs agent.
+
+
+Q7. A company has deployed a custom DNS server in AWS. The Security Engineer wants to ensure that Amazon EC2 instances cannot use the Amazon-provided DNS.
+How can the Security Engineer block access to the Amazon-provided DNS in the VPC?
+
+A. Deny access to the Amazon DNS IP within all security groups.
+B. Add a rule to all network access control lists that deny access to the Amazon DNS IP.
+C. Add a route to all route tables that black holes traffic to the Amazon DNS IP.
+D. Disable DNS resolution within the VPC configuration.
+
+
+
+Q8. An employee accidentally exposed an AWS access key and secret access key during a public presentation.The company Security Engineer immediately disabled the key.
+How can the Engineer assess the impact of the key exposure and ensure that the credentials were not misused?(Choose two.)
+A. Analyze AWS CloudTrail for activity.
+B. Analyze Amazon CloudWatch Logs for activity.
+C. Download and analyze the IAM Use report from AWS Trusted Advisor.
+D. Analyze the resource inventory in AWS Config for IAM user activity.
+E. Download and analyze a credential report from IAM.
+
+
+
+Q9. Which of the following minimizes the potential attack surface for applications?
+A. Use security groups to provide stateful firewalls for Amazon EC2 instances at the hypervisor level.
+B. Use network ACLs to provide stateful firewalls at the VPC level to prevent access to any specific AWSresource.
+C. Use AWS Direct Connect for secure trusted connections between EC2 instances within private subnets.D. Design network security in a single layer within the perimeter network (also known as DMZ, demilitarized zone,and screened subnet) to facilitate quicker responses to threats.
+
+
+
+Q10 A distributed web application is installed across several EC2 instances in public subnets residing in twoAvailability Zones. Apache logs show several intermittent brute-force attacks from hundreds of IP addresses at thelayer 7 level over the past six months.
+What would be the BEST way to reduce the potential impact of these attacks in the future?A. Use custom route tables to prevent malicious traffic from routing to the instances.
+B. Update security groups to deny traffic from the originating source IP addresses.
+C. Use network ACLs.
+D. Install intrusion prevention software (IPS) on each instance.
+
+
+
+Q11. A company plans to move most of its IT infrastructure to AWS. They want to leverage their existing onpremises Active Directory as an identity provider for AWS.
+Which combination of steps should a Security Engineer take to federate the company's on- premises ActiveDirectory with AWS? (Choose two.)
+A. Create IAM roles with permissions corresponding to each Active Directory group.
+B. Create IAM groups with permissions corresponding to each Active Directory group.
+C. Configure Amazon Cloud Directory to support a SAML provider.
+D. Configure Active Directory to add relying party trust between Active Directory and AWS.
+E. Configure Amazon Cognito to add relying party trust between Active Directory and AWS.
+
+
+
+Q12. A security alert has been raised for an Amazon EC2 instance in a customer account that is exhibiting strangebehavior. The Security Engineer must first isolate the EC2 instance and then use tools for further investigation.What should the Security Engineer use to isolate and research this event? (Choose three.)
+A. AWS CloudTrail
+B. Amazon Athena
+C. AWS Key Management Service (AWS KMS)
+D. VPC Flow Logs
+E. AWS Firewall Manager
+F. Security groups
+
+
+
+Q13 A financial institution has the following security requirements:
+- Cloud-based users must be contained in a separate authentication domain.
+- Cloud-based users cannot access on-premises systems.
+As part of standing up a cloud environment, the financial institution is creating a number of Amazon manageddatabases and Amazon EC2 instances. An Active Directory service exists on- premises that has all theadministrator accounts, and these must be able to access the databases and instances.
+How would the organization manage its resources in the MOST secure manner? (Choose two.)
+A. Configure an AWS Managed Microsoft AD to manage the cloud resources.
+B. Configure an additional on-premises Active Directory service to manage the cloud resources.
+C. Establish a one-way trust relationship from the existing Active Directory to the new Active Directory service.
+D. Establish a one-way trust relationship from the new Active Directory to the existing Active Directory service.
+E. Establish a two-way trust between the new and existing Active Directory services.
+
+
+
+Q14. An organization wants to be alerted when an unauthorized Amazon EC2 instance in its VPC performs a network port scan against other instances in the VPC. When the Security team performs its own internal tests in a separate account by using pre-approved third-party scanners from the AWS Marketplace, the Security team also then receives multiple Amazon GuardDuty events from Amazon CloudWatch alerting on its test activities.How can the Security team suppress alerts about authorized security tests while still receiving alerts about theunauthorized activity?
+A. Use a filter in AWS CloudTrail to exclude the IP addresses of the Security team's EC2 instances.
+B. Add the Elastic IP addresses of the Security team's EC2 instances to a trusted IP list in Amazon GuardDuty.
+C. Install the Amazon Inspector agent on the EC2 instances that the Security team uses.
+D. Grant the Security team's EC2 instances a role with permissions to call Amazon GuardDuty API operations
+
+
+
+Q15. The Security team believes that a former employee may have gained unauthorized access to AWS resources sometime in the past 3 months by using an identified access key.
+What approach would enable the Security team to find out what the former employee may have done within AWS?
+A. Use the AWS CloudTrail console to search for user activity.
+B. Use the Amazon CloudWatch Logs console to filter CloudTrail data by user.
+C. Use AWS Config to see what actions were taken by the user.
+D. Use Amazon Athena to query CloudTrail logs stored in Amazon S3.
+
+
+
+Q16. The Security Engineer implemented a new vault lock policy for 10TB of data and called initiate- 12 hours ago.
+The Audit team identified a typo that is allowing incorrect access to the vault-lock
+What is the MOST cost-effective way to correct this?
+A. Call the abort-vault-lock operation, fix the typo, and call the initiate-vault-lock again.
+B. Copy the vault data to Amazon S3, delete the vault, and create a new vault with the data.
+C. Update the policy, keeping the vault lock in place.
+D. Update the policy and call initiate-vault-lock again to apply the new policy
+
+
+
+Q17. A company wants to control access to its AWS resources by using identities and groups that are defined inits existing Microsoft Active Directory. What must the company create in its AWS account to map permissions forAWS services to Active Directory user attributes?
+A. AWS IAM groups
+B. AWS IAM users
+C. AWS IAM roles
+D. AWS IAM access keys
+
+
+Q18. A company has contracted with a third party to audit several AWS accounts. To enable the audit, cross account IAM roles have been created in each account targeted for audit. The Auditor is having trouble accessing some of the accounts.
+Which of the following may be causing this problem? (Choose three.)
+A. The external ID used by the Auditor is missing or incorrect.
+B. The Auditor is using the incorrect password.
+C. The Auditor has not been granted sts:AssumeRole for the role in the destination account.
+D. The Amazon EC2 role used by the Auditor must be set to the destination account role.
+E. The secret key used by the Auditor is missing or incorrect.
+F. The role ARN used by the Auditor is missing or incorrect
+
+
+
+
+Q19 Compliance requirements state that all communications between company on-premises hosts and EC2instances be encrypted in transit. Hosts use custom proprietary protocols for their communication, and EC2instances need to be fronted by a load balancer for increased availability.
+Which of the following solutions will meet these requirements?
+A. Offload SSL termination onto an SSL listener on a Classic Load Balancer, and use a TCP connection between the load balancer and the EC2 instances.
+B. Route all traffic throughout a TCP listener on a Classic Load Balancer, and terminate the TLS connection onthe EC2 instances.
+C. Create an HTTPS listener using an Application Load Balancer, and route all of the communication through that load balancer.
+D. Offload SSL termination onto an SSL listener using an Application Load Balancer, and re-spawn and SSLconnection between the load balancer and the EC2 instances.
+
+
+
+Q20. An application is currently secured using network access control lists and security groups. Web servers arelocated in public subnets behind an Application Load Balancer (ALB); application servers are located in privatesubnets.
+How can edge security be enhanced to safeguard the Amazon EC2 instances against attack? (Choose two.)
+A. Configure the application's EC2 instances to use NAT gateways for all inbound traffic.
+B. Move the web servers to private subnets without public IP addresses.
+C. Configure AWS WAF to provide DDoS attack protection for the ALB.
+D. Require all inbound network traffic to route through a bastion host in the private subnet.
+E. Require all inbound and outbound network traffic to route through an AWS Direct Connect connection.
+
+
+
+
+Q21. A Security Administrator is restricting the capabilities of company root user accounts. The company usesAWS Organizations and has enabled it for all feature sets, including consolidates billing. The top-level account isused for billing and administrative purposes, not for operational AWS resource purposes.
+How can the Administrator restrict usage of member root user accounts across the organization?
+A. Disable the use of the root user account at the organizational root. Enable multi-factor authentication of the rootuser account for each organizational member account.
+B. Configure IAM user policies to restrict root account capabilities for each Organizations member account.
+C. Create an organizational unit (OU) in Organizations with a service control policy that controls usage of the rootuser. Add all operational accounts to the new OU.
+D. Configure AWS CloudTrail to integrate with Amazon CloudWatch Logs and then create a metric filter forRootAccountUsage.
+
+
+
+
+Q22 A company has complex connectivity rules governing ingress, egress, and communications betweenAmazon EC2 instances. The rules are so complex that they cannot be implemented within the limits of themaximum number of security groups and network access control lists (network ACLs).
+What mechanism will allow the company to implement all required network rules without incurring additional cost?
+A. Configure AWS WAF rules to implement the required rules.
+B. Use the operating system built-in, host-based firewall to implement the required rules.
+C. Use a NAT gateway to control ingress and egress according to the requirements.
+D. Launch an EC2-based firewall product from the AWS Marketplace, and implement the required rules in thatproduct.
+
+
+
+
+
+Q23. A company requires that IP packet data be inspected for invalid or malicious content.
+Which of the following approaches achieve this requirement? (Choose two.)
+A. Configure a proxy solution on Amazon EC2 and route all outbound VPC traffic through it. Perform inspectionwithin proxy software on the EC2 instance.
+B. Configure the host-based agent on each EC2 instance within the VPC. Perform inspection within thehost-based agent.
+C. Enable VPC Flow Logs for all subnets in the VPC. Perform inspection from the Flow Log data within AmazonCloudWatch Logs.
+D. Configure Elastic Load Balancing (ELB) access logs. Perform inspection from the log data within the ELBaccess log files.
+E. Configure the CloudWatch Logs agent on each EC2 instance within the VPC. Perform inspection from the logdata within CloudWatch Logs.
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

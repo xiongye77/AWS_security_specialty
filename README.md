@@ -551,10 +551,268 @@ D. Create a CMK with unique imported key material for each data classification t
 
 
 
+An organization wants to deploy a three-tier web application whereby the application servers run on AmazonEC2 instances. These EC2 instances need access to credentials that they will use to authenticate their SQLconnections to an Amazon RDS DB instance. Also, AWS Lambda functions must issue queries to the RDSdatabase by using the same database credentials.
+The credentials must be stored so that the EC2 instances and the Lambda functions can access them. No otheraccess is allowed. The access logs must record when the credentials were accessed and by whom.
+What should the Security Engineer do to meet these requirements?
+A. Store the database credentials in AWS Key Management Service (AWS KMS). Create an IAM role with accessto AWS KMS by using the EC2 and Lambda service principals in the role's trust policy. Add the role to an EC2instance profile. Attach the instance profile to the EC2 instances.
+Set up Lambda to use the new role for execution.
+B. Store the database credentials in AWS KMS. Create an IAM role with access to KMS by using the EC2 andLambda service principals in the role's trust policy. Add the role to an EC2 instance profile. Attach the instanceprofile to the EC2 instances and the Lambda function.
+C. Store the database credentials in AWS Secrets Manager. Create an IAM role with access to Secrets Managerby using the EC2 and Lambda service principals in the role's trust policy. Add the role to an EC2 instance profile.Attach the instance profile to the EC2 instances and the Lambda function.
+D. Store the database credentials in AWS Secrets Manager. Create an IAM role with access to Secrets Managerby using the EC2 and Lambda service principals in the role's trust policy. Add the role to an EC2 instance profile.Attach the instance profile to the EC2 instances. Set up Lambda to use the new role for execution.
+
+
+
+
+Q58. An organization is using Amazon CloudWatch Logs with agents deployed on its Linux Amazon EC2 instances. The agent configuration files have been checked and the application log files to be pushed are configured correctly. A review has identified that logging from specific instances is missing.
+Which steps should be taken to troubleshoot the issue? (Choose two.)
+A. Use an EC2 run command to confirm that the "awslogs" service is running on all instances.
+B. Verify that the permissions used by the agent allow creation of log groups/streams and to put log events.
+C. Check whether any application log entries were rejected because of invalid time stamps by reviewing /var/cwlogs/rejects.log.
+D. Check that the trust relationship grants the service "cwlogs.amazonaws.com" permission to write objects to the Amazon S3 staging bucket.
+E. Verify that the time zone on the application servers is in UTC.
+
+
+
 A. The Amazon WorkMail and Amazon SES services have delegated KMS encrypt and delegated KMS encryptand decrypt permissions to the ExampleUser principal in the 111122223333 account.
 B. The ExampleUser principal can transparently encrypt and decrypt email exchanges specifically betweenExampleUser and AWS.
 C. The CMK is to be used for encrypting and decrypting only when the principal is ExampleUser and the requestcomes from WorkMail or SES in the specified region.
 D. The key policy allows WorkMail or SES to encrypt or decrypt on behalf of the user for any CMK in the account.
+
+
+
+<img width="1049" alt="image" src="https://github.com/user-attachments/assets/cfa44caf-7543-45f9-ad45-14b15bb174eb">
+
+
+A security engineer must use AWS Key Management Service (AWS KMS) to design a key management solution for a set of Amazon Elastic Block Store (Amazon
+EBS) volumes that contain sensitive data. The solution needs to ensure that the key material automatically expires in 90 days.
+Which solution meets these criteria?
+
+A. A customer managed CMK that uses customer provided key material
+B. A customer managed CMK that uses AWS provided key material
+C. An AWS managed CMK
+D. Operation system-native encryption that uses GnuPG
+
+
+
+<img width="1009" alt="image" src="https://github.com/user-attachments/assets/fa3d17f3-3735-4934-8bd3-eb10ba586888">
+
+
+
+<img width="1126" alt="image" src="https://github.com/user-attachments/assets/1bc76a3d-9de7-4164-b465-46c4b6d7dd3c">
+
+
+Q527. A company stores images for a website in an Amazon S3 bucket. The company is using Amazon CloudFront to serve the images to end users. The company recently discovered that the images are being accessed from countries where the company does not have a distribution license. Which actions should the company take to secure the images to limit their distribution? (Select TWO.)
+A. Update the S3 bucket policy to restrict access to a CloudFront origin access identity (OAI).
+B. Update the website DNS record to use an Amazon Route 53 geolocation record deny list of countries where the company lacks a license
+C. Add a CloudFront georestriction deny list of countries where the company lacks a license.
+D. Update the S3 bucket policy with a deny list of countries where the company lacks a license.
+E. Enable the Restrict Viewer Access option in CloudFront to create a deny list of countries where the company lacks a license
+
+
+
+
+<img width="1037" alt="image" src="https://github.com/user-attachments/assets/91a2288b-7c0c-4ebd-9095-9bf7e4d7e044">
+
+
+<img width="1059" alt="image" src="https://github.com/user-attachments/assets/c4f597e0-945e-4ba1-b92a-61fd752bf948">
+<img width="1144" alt="image" src="https://github.com/user-attachments/assets/a1991c45-bdee-4c9d-a267-253657cfc9e9">
+<img width="1108" alt="image" src="https://github.com/user-attachments/assets/c2315f78-6347-451e-8037-45ae2ce17fbf">
+
+
+
+
+<img width="1048" alt="image" src="https://github.com/user-attachments/assets/039813bb-e87b-41d7-9b9b-fe6d142dfe3b">
+
+<img width="963" alt="image" src="https://github.com/user-attachments/assets/70eecb6a-8740-488b-837b-0e8a6a8cc08b">
+
+
+
+A company is expanding its group of stores. On the day that each new store opens, the company wants to launch a customized web application for that store. Each store's application will have a non-production environment and a production environment. Each environment will be deployed in a separate AWS account. The company uses AWS Organizations and has an OU that is used only for these accounts. 
+The company distributes most of the development work to third-party development teams. A security engineer needs to ensure that each team follows the company's deployment plan for AWS resources. The security engineer also must limit access to the deployment plan to only the developers who need access. The security engineer already has created an AWS CloudFormation template that implements the deployment plan.
+What should the security engineer do next to meet the requirements in the MOST secure way? A or C
+
+A. Create an AWS Service Catalog portfolio in the organization's management account. Upload the CloudFormation template. Add the template to the portfolio's product list. Share the portfolio with the OU.
+B. Use the CloudFormation CLI to create a module from the CloudFormation template. Register the module as a private extension in the CloudFormation registry. Publish the extension. In the OU, create an SCP that allows access to the extension.
+C. Create an AWS Service Catalog portfolio in the organization's management account. Upload the CloudFormation template. Add the template to the portfolio's product list. Create an IAM role that has a trust policy that allows cross-account access to the portfolio for users in the OU accounts. Attach the AWSServiceCatalogEndUserFullAccess managed policy to the role.
+D. Use the CloudFormation CLI to create a module from the CloudFormation template. Register the module as a private extension in the CloudFormation registry. Publish the extension. Share the extension with the OU.
+
+
+
+
+A company uses AWS Signer with all of the company’s AWS Lambda functions. A developer recently stopped working for the company. The company wants to ensure that all the code that the developer wrote can no longer be deployed to the Lambda functions.
+
+Which solution will meet this requirement?  A
+
+A. Revoke all versions of the signing profile assigned to the developer.
+B. Examine the developer’s IAM roles. Remove all permissions that grant access to Signer.
+C. Re-encrypt all source code with a new AWS Key Management Service (AWS KMS) key.
+D. Use Amazon CodeGuru to profile all the code that the Lambda functions use.
+
+
+ 
+An IAM user receives an Access Denied message when the user attempts to access objects in an Amazon S3 bucket. The user and the S3 bucket are in the same AWS account. The S3 bucket is configured to use server-side encryption with AWS KMS keys (SSE-KMS) to encrypt all of its objects at rest by using a customer managed key from the same AWS account. The S3 bucket has no bucket policy defined. The IAM user has been granted permissions through an IAM policy that allows the kms:Decrypt permission to the customer managed key. The IAM policy also allows the s3:List* and s3:Get* permissions for the S3 bucket and its objects.
+
+Which of the following is a possible reason that the IAM user cannot access the objects in the S3 bucket?  D
+
+A. The IAM policy needs to allow the kms:DescribeKey permission.
+B. The S3 bucket has been changed to use the AWS managed key to encrypt objects at rest.
+C. An S3 bucket policy needs to be added to allow the IAM user to access the objects.
+D. The KMS key policy has been edited to remove the ability for the AWS account to have full access to the key.  
+
+
+
+
+
+A company uses AWS Organizations to manage a multi-account AWS environment in a single AWS Region. The organization's management account is named management-01. The company has turned on AWS Config in all accounts in the organization. The company has designated an account named security-01 as the delegated administrator for AWS Config.
+All accounts report the compliance status of each account's rules to the AWS Config delegated administrator account by using an AWS Config aggregator. Each account administrator can configure and manage the account's own AWS Config rules to handle each account's unique compliance requirements.
+A security engineer needs to implement a solution to automatically deploy a set of 10 AWS Config rules to all existing and future AWS accounts in the organization. The solution must turn on AWS Config automatically during account creation.
+Which combination of steps will meet these requirements? (Choose two.)  BE
+
+A. Create an AWS CloudFormation template that contains the 10 required AWS Config rules. Deploy the template by using CloudFormation StackSets in the security-01 account.
+B. Create a conformance pack that contains the 10 required AWS Config rules. Deploy the conformance pack from the security-01 account.
+C. Create a conformance pack that contains the 10 required AWS Config rules. Deploy the conformance pack from the management-01 account.
+D. Create an AWS CloudFormation template that will activate AWS Config. Deploy the template by using CloudFormation StackSets in the security-01 account.
+E. Create an AWS CloudFormation template that will activate AWS Config. Deploy the template by using CloudFormation StackSets in the management-01 account.
+
+
+
+
+
+A company is using Amazon Elastic Container Service (Amazon ECS) to run its container-based application on AWS. The company needs to ensure that the container images contain no severe vulnerabilities. The company also must ensure that only specific IAM roles and specific AWS accounts can access the container images.
+
+Which solution will meet these requirements with the LEAST management overhead?   C 
+
+A. Pull images from the public container registry. Publish the images to Amazon Elastic Container Registry (Amazon ECR) repositories with scan on push configured in a centralized AWS account. Use a CI/CD pipeline to deploy the images to different AWS accounts. Use identity-based policies to restrict access to which IAM principals can access the images.
+B. Pull images from the public container registry. Publish the images to a private container registry that is hosted on Amazon EC2 instances in a centralized AWS account. Deploy host-based container scanning tools to EC2 instances that run Amazon ECS. Restrict access to the container images by using basic authentication over HTTPS.
+C. Pull images from the public container registry. Publish the images to Amazon Elastic Container Registry (Amazon ECR) repositories with scan on push configured in a centralized AWS account. Use a CI/CD pipeline to deploy the images to different AWS accounts. Use repository policies and identity-based policies to restrict access to which IAM principals and accounts can access the images.
+D. Pull images from the public container registry. Publish the images to AWS CodeArtifact repositories in a centralized AWS account. Use a CI/CD pipeline to deploy the images to different AWS accounts. Use repository policies and identity-based policies to restrict access to which IAM principals and accounts can access the images. 
+
+<img width="808" alt="image" src="https://github.com/user-attachments/assets/7cf9f903-85e1-44ab-b100-d9d2fda1c6c4">
+
+
+
+
+
+A company has several petabytes of data. The company must preserve this data for 7 years to comply with regulatory requirements. The company's compliance team asks a security officer to develop a strategy that will prevent anyone from changing or deleting the data.
+Which solution will meet this requirement MOST cost-effectively?  A or C 
+
+A. Create an Amazon S3 bucket. Configure the bucket to use S3 Object Lock in compliance mode. Upload the data to the bucket. Create a resource-based bucket policy that meets all the regulatory requirements.
+B. Create an Amazon S3 bucket. Configure the bucket to use S3 Object Lock in governance mode. Upload the data to the bucket. Create a user-based IAM policy that meets all the regulatory requirements.
+C. Create a vault in Amazon S3 Glacier. Create a Vault Lock policy in S3 Glacier that meets all the regulatory requirements. Upload the data to the vault.
+D. Create an Amazon S3 bucket. Upload the data to the bucket. Use a lifecycle rule to transition the data to a vault in S3 Glacier. Create a Vault Lock policy that meets all the regulatory requirements.
+
+<img width="788" alt="image" src="https://github.com/user-attachments/assets/212a98fa-b42b-48a5-9e57-1ea191443cbb">
+<img width="1086" alt="image" src="https://github.com/user-attachments/assets/9248384b-c5dd-439a-bba9-8cd3665a385c">
+
+
+
+
+Company A has an AWS account that is named Account A. Company A recently acquired Company B, which has an AWS account that is named Account B. Company B stores its files in an Amazon S3 bucket. The administrators need to give a user from Account A full access to the S3 bucket in Account B.
+
+After the administrators adjust the IAM permissions for the user in Account A to access the S3 bucket in Account B, the user still cannot access any files in the S3 bucket.
+
+Which solution will resolve this issue?  C 
+
+A. In Account B, create a bucket ACL to allow the user from Account A to access the S3 bucket in Account B.
+B. In Account B, create an object ACL to allow the user from Account A to access all the objects in the S3 bucket in Account B.
+C. In Account B, create a bucket policy to allow the user from Account A to access the S3 bucket in Account B.
+D. In Account B, create a user policy to allow the user from Account A to access the S3 bucket in Account B.
+
+
+
+
+A company has an AWS Lambda function that creates image thumbnails from larger images. The Lambda function needs read and write access to an Amazon S3 bucket in the same AWS account.
+Which solutions will provide the Lambda function this access? (Choose two.)。 C/D 
+
+A. Create an IAM user that has only programmatic access. Create a new access key pair. Add environmental variables to the Lambda function with the access key ID and secret access key. Modify the Lambda function to use the environmental variables at run time during communication with Amazon S3.
+B. Generate an Amazon EC2 key pair. Store the private key in AWS Secrets Manager. Modify the Lambda function to retrieve the private key from Secrets Manager and to use the private key during communication with Amazon S3.
+C. Create an IAM role for the Lambda function. Attach an IAM policy that allows access to the S3 bucket.
+D. Create an IAM role for the Lambda function. Attach a bucket policy to the S3 bucket to allow access. Specify the function's IAM role as the principal.
+E. Create a security group. Attach the security group to the Lambda function. Attach a bucket policy that allows access to the S3 bucket through the security group ID.
+
+
+
+A company needs a security engineer to implement a scalable solution for multi-account authentication and authorization. The solution should not introduce additional user-managed architectural components. Native AWS features should be used as much as possible. The security engineer has set up AWS Organizations with all features activated and AWS IAM Identity Center (AWS Single Sign-On) enabled.
+Which additional steps should the security engineer take to complete the task?  B 
+
+A. Use AD Connector to create users and groups for all employees that require access to AWS accounts. Assign AD Connector groups to AWS accounts and link to the IAM roles in accordance with the employees’ job functions and access requirements. Instruct employees to access AWS accounts by using the AWS Directory Service user portal.
+B. Use an IAM Identity Center default directory to create users and groups for all employees that require access to AWS accounts. Assign groups to AWS accounts and link to permission sets in accordance with the employees’ job functions and access requirements. Instruct employees to access AWS accounts by using the IAM Identity Center user portal.
+C. Use an IAM Identity Center default directory to create users and groups for all employees that require access to AWS accounts. Link IAM Identity Center groups to the IAM users present in all accounts to inherit existing permissions. Instruct employees to access AWS accounts by using the IAM Identity Center user portal.
+D. Use AWS Directory Service for Microsoft Active Directory to create users and groups for all employees that require access to AWS accounts. Enable AWS Management Console access in the created directory and specify IAM Identity Center as a source of information for integrated accounts and permission sets. Instruct employees to access AWS accounts by using the AWS Directory Service user portal.
+
+
+
+A company has deployed Amazon GuardDuty and now wants to implement automation for potential threats. The company has decided to start with RDP brute force attacks that come from Amazon EC2 instances in the company's AWS environment. A security engineer needs to implement a solution that blocks the detected communication from a suspicious instance until investigation and potential remediation can occur.
+Which solution will meet these requirements?   C
+
+A. Configure GuardDuty to send the event to an Amazon Kinesis data stream. Process the event with an Amazon Kinesis Data Analytics for Apache Flink application that sends a notification to the company through Amazon Simple Notification Service (Amazon SNS). Add rules to the network ACL to block traffic to and from the suspicious instance.
+B. Configure GuardDuty to send the event to Amazon EventBridge. Deploy an AWS WAF web ACL. Process the event with an AWS Lambda function that sends a notification to the company through Amazon Simple Notification Service (Amazon SNS) and adds a web ACL rule to block traffic to and from the suspicious instance.
+C. Enable AWS Security Hub to ingest GuardDuty findings and send the event to Amazon EventBridge. Deploy AWS Network Firewall. Process the event with an AWS Lambda function that adds a rule to a Network Firewall firewall policy to block traffic to and from the suspicious instance.
+D. Enable AWS Security Hub to ingest GuardDuty findings. Configure an Amazon Kinesis data stream as an event destination for Security Hub. Process the event with an AWS Lambda function that replaces the security group of the suspicious instance with a security group that does not allow any connections.
+
+
+
+
+
+
+A company has an AWS account that hosts a production application. The company receives an email notification that Amazon GuardDuty has detected an Impact:IAMUser/AnomalousBehavior finding in the account. A security engineer needs to run the investigation playbook for this security incident and must collect and analyze the information without affecting the application.
+Which solution will meet these requirements MOST quickly?   B 
+
+A. Log in to the AWS account by using read-only credentials. Review the GuardDuty finding for details about the IAM credentials that were used. Use the IAM console to add a DenyAll policy to the IAM principal.
+B. Log in to the AWS account by using read-only credentials. Review the GuardDuty finding to determine which API calls initiated the finding. Use Amazon Detective to review the API calls in context.
+C. Log in to the AWS account by using administrator credentials. Review the GuardDuty finding for details about the IAM credentials that were used. Use the IAM console to add a DenyAll policy to the IAM principal.
+D. Log in to the AWS account by using read-only credentials. Review the GuardDuty finding to determine which API calls initiated the finding. Use AWS CloudTrail Insights and AWS CloudTrail Lake to review the API calls in context.
+
+
+
+<img width="1094" alt="image" src="https://github.com/user-attachments/assets/ff58b999-42cd-4206-8e89-059fce813e35">
+
+
+<img width="1078" alt="image" src="https://github.com/user-attachments/assets/7aff14ae-63b1-4fe8-9c77-74b1667b90e7">
+
+
+![image](https://github.com/user-attachments/assets/3f50259c-efca-4854-afd2-d69d658804ca)
+
+
+
+<img width="1047" alt="image" src="https://github.com/user-attachments/assets/f032cde7-d734-4d99-b8fb-6ee29e65ca07">
+
+<img width="1022" alt="image" src="https://github.com/user-attachments/assets/6593d095-3b25-421c-acb3-497a2de9cc84">
+
+
+
+<img width="1102" alt="image" src="https://github.com/user-attachments/assets/ead8a521-a72d-4516-aabf-34ccfe834dbe">
+B/D ?
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/60c7d219-0486-422f-8015-886d3a6906ea">
+
+
+
+<img width="1031" alt="image" src="https://github.com/user-attachments/assets/798f747d-d51e-444d-a2a9-61ab7ea49241">
+
+<img width="1017" alt="image" src="https://github.com/user-attachments/assets/c9b61a97-fff1-46cb-90cb-b2f72f4f34d2">
+
+
+<img width="1063" alt="image" src="https://github.com/user-attachments/assets/13b792e2-dcea-43d8-8931-70ee4b852c3d">
+
+<img width="1075" alt="image" src="https://github.com/user-attachments/assets/6173f666-c97a-4907-aa97-22c729622b01">
+
+
+<img width="1031" alt="image" src="https://github.com/user-attachments/assets/f963dc0f-f8df-48a3-8621-5b6b5b9ab80c">
+
+<img width="1050" alt="image" src="https://github.com/user-attachments/assets/e8e7a039-8bb9-40d6-b66e-b98105b0ee54">
+
+
+<img width="1037" alt="image" src="https://github.com/user-attachments/assets/0c92b3f6-69ca-441f-915b-951b0b50c8ef">
+
+
+<img width="1045" alt="image" src="https://github.com/user-attachments/assets/774af8a8-8f79-4497-803a-a9c8e262c762">
+<img width="849" alt="image" src="https://github.com/user-attachments/assets/319890f6-8777-478e-9747-827d2121abef">
+
+
+<img width="1030" alt="image" src="https://github.com/user-attachments/assets/847a5801-5b64-49e3-978e-694ae79c79b3">
+<img width="1038" alt="image" src="https://github.com/user-attachments/assets/4fefaf39-22f1-490e-9243-bebdbf608034">
+<img width="752" alt="image" src="https://github.com/user-attachments/assets/726ad737-65f4-42e7-8949-02fcea491240">
+
 
 
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">

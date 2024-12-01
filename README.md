@@ -902,6 +902,240 @@ B/D ?
 
 <img width="1056" alt="image" src="https://github.com/user-attachments/assets/95a8a1c9-160e-4ff0-a9f6-b7eb686f83e5">
 
+<img width="1016" alt="image" src="https://github.com/user-attachments/assets/eb342f53-b638-4de6-be12-0a7e0776026d">
+
+<img width="1029" alt="image" src="https://github.com/user-attachments/assets/931d941d-5ed5-480b-bd11-5825ec50a9ce">
+
+<img width="1017" alt="image" src="https://github.com/user-attachments/assets/b32173f0-f8db-47a9-a4ae-e2bb49653082">
+
+<img width="1017" alt="image" src="https://github.com/user-attachments/assets/f13817e8-49ba-41ce-8bf4-ae484fb38229">
+Option C Analysis:
+
+Set up a delegated Amazon Security Lake administrator account in Organizations.
+
+Amazon Security Lake is designed to collect, aggregate, and normalize security data from multiple sources into a centralized data lake stored in your account.
+By setting up a delegated administrator account, you can manage Security Lake configurations for all member accounts in your AWS Organization.
+Enable and configure Security Lake for the organization.
+
+Enable Security Lake at the organizational level to collect logs from all member accounts.
+Configure the data sources, such as AWS services, custom applications, and third-party services.
+Add the accounts that need monitoring.
+
+Include all relevant AWS accounts in the Security Lake configuration to ensure comprehensive log collection.
+This includes accounts running AWS Marketplace offerings that support integration with Security Lake.
+Use Amazon Athena to query the log data.
+
+Security Lake stores data in Amazon S3 using the Open Cybersecurity Schema Framework (OCSF) format.
+Amazon Athena can be used to run SQL queries against the data stored in S3, allowing for flexible and powerful analysis.
+How Option C Meets the Requirements:
+
+Aggregates Logs from the Entire Organization:
+
+Security Lake collects data from all AWS accounts in your organization when enabled.
+Centralizes logs from AWS services like VPC Flow Logs, AWS CloudTrail, Amazon Route 53 logs, etc.
+Includes AWS Marketplace Offerings:
+
+Security Lake integrates with select AWS Marketplace security solutions that support OCSF.
+Allows ingestion of logs from third-party applications running in AWS accounts.
+Ingests Logs from On-Premises Systems:
+
+Supports ingestion of data from on-premises systems through custom data sources.
+You can format your on-premises logs to comply with OCSF and ingest them into Security Lake.
+Normalization of Events:
+
+Automatically normalizes data to the OCSF format, simplifying analysis across different log types.
+Reduces the complexity of handling diverse log formats.
+Centralized Analysis with Athena:
+
+Amazon Athena provides serverless, ad-hoc querying capabilities.
+Enables querying across all aggregated and normalized data without managing any infrastructure.
+Scalability and Efficiency:
+
+Security Lake is a fully managed service that scales with your needs.
+Reduces operational overhead compared to building and maintaining custom solutions.
+Why Other Options Are Less Suitable:
+
+Option A:
+
+Manual Setup and Maintenance:
+
+Requires manual configuration of log deliveries to a centralized S3 bucket in all accounts.
+Managing AWS Glue crawlers and ensuring proper schema definitions can be complex.
+Limited Integration with On-Premises and AWS Marketplace Logs:
+
+Does not inherently support ingestion and normalization of logs from on-premises systems or AWS Marketplace offerings.
+Requires additional custom solutions to ingest and normalize these logs.
+Lacks Automatic Normalization:
+
+AWS Glue can help with schema discovery but does not standardize logs into a common format like OCSF.
+Option B:
+
+Complexity in Cross-Account Log Streaming:
+
+Setting up CloudWatch Logs streams and subscription filters across multiple accounts is operationally intensive.
+Managing permissions and ensuring consistent configurations across accounts is challenging.
+Integration Challenges with On-Premises Systems:
+
+Ingesting on-premises logs into CloudWatch Logs requires additional setup and possibly custom scripts or agents.
+No Built-in Normalization:
+
+Logs are not automatically normalized, making cross-source analysis more difficult.
+Option D:
+
+Incorrect Use of SCPs:
+
+Service Control Policies (SCPs) cannot enforce configuration changes like log delivery settings.
+SCPs are used to allow or deny IAM actions across AWS accounts, not to configure services.
+Operational Challenges:
+
+Even if possible, pushing configurations via SCPs is not a standard or recommended practice.
+Would not address normalization of logs or ingestion from on-premises systems.
+No Mention of Normalization or On-Premises Integration:
+
+Does not solve the need to normalize logs.
+Does not provide a solution for ingesting on-premises logs.
+Conclusion:
+
+Option C is the most suitable solution as it:
+
+Directly addresses all requirements, including aggregation and normalization of logs from AWS accounts, AWS Marketplace offerings, and on-premises systems.
+Leverages a managed AWS service (Amazon Security Lake) that simplifies the ingestion, normalization, and storage of log data.
+Provides a centralized platform for analysis using Amazon Athena without the need to manage underlying infrastructure.
+Ensures scalability and operational efficiency, reducing the need for custom development and maintenance.
+
+
+
+<img width="1022" alt="image" src="https://github.com/user-attachments/assets/294fb438-5fbf-4488-86db-1ed08dbee9b8">
+Context:
+
+The company needs to implement encryption at rest and enforce least privilege data access controls for sensitive data stored in Amazon S3 and Amazon DynamoDB.
+The data is accessed by AWS Lambda functions and container-based services on Amazon EKS running on AWS Fargate.
+They have created an AWS KMS customer managed key.
+Requirements:
+
+Encrypt all data at rest.
+Enforce least privilege data access controls.
+Solution Overview:
+
+Option C proposes:
+
+Creating a Key Policy that Allows kms:Decrypt Action Only for Specific Services:
+
+Services Included:
+Amazon S3
+Amazon DynamoDB
+AWS Lambda
+Amazon EKS
+Creating a Service Control Policy (SCP) that Denies the Creation of Unencrypted Resources:
+
+Denies creation of S3 buckets and DynamoDB tables that are not encrypted with the customer managed KMS key.
+Detailed Explanation:
+
+1. Key Policy Restricting kms:Decrypt Action:
+
+Purpose:
+
+Enforces least privilege by ensuring only authorized services can decrypt data using the KMS key.
+Prevents unauthorized access to the encrypted data.
+Implementation:
+
+Modify the KMS key policy to allow the kms:Decrypt action only for the AWS services that need to access the data.
+The key policy would specify the service principals for S3, DynamoDB, Lambda, and EKS.
+Example Key Policy Snippet:
+
+{
+  "Version": "2012-10-17",
+  "Id": "key-policy",
+  "Statement": [
+    {
+      "Sid": "Allow use of the key",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "s3.amazonaws.com",
+          "dynamodb.amazonaws.com",
+          "lambda.amazonaws.com",
+          "eks.amazonaws.com"
+        ]
+      },
+      "Action": [
+        "kms:Decrypt",
+        "kms:Encrypt",
+        "kms:ReEncrypt*",
+        "kms:GenerateDataKey*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+Benefit:
+
+Limits the decryption capability to only the services that require it.
+Supports least privilege by not granting unnecessary permissions to other services or principals.
+2. SCP Denying Creation of Unencrypted Resources:
+
+Purpose:
+
+Ensures all data at rest is encrypted by preventing the creation of unencrypted S3 buckets and DynamoDB tables.
+Enforces compliance with the requirement to encrypt all data at rest.
+Implementation:
+
+Apply an SCP at the organizational level that denies the creation of S3 buckets and DynamoDB tables unless they are configured to use the specified KMS key.
+Example SCP for S3 Buckets:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyUnencryptedS3Buckets",
+      "Effect": "Deny",
+      "Action": "s3:CreateBucket",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption-aws-kms-key-id": "arn:aws:kms:REGION:ACCOUNT_ID:key/KEY_ID"
+        }
+      }
+    }
+  ]
+}
+Example SCP for DynamoDB Tables:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyUnencryptedDynamoDBTables",
+      "Effect": "Deny",
+      "Action": "dynamodb:CreateTable",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "dynamodb:KmsMasterKeyId": "arn:aws:kms:REGION:ACCOUNT_ID:key/KEY_ID"
+        }
+      }
+    }
+  ]
+}
+Benefit:
+
+Prevents users from accidentally or intentionally creating unencrypted resources.
+Enforces organizational policies across all AWS accounts in the organization.
+Why Option C is Correct:
+
+Meets Both Requirements:
+
+Encryption at Rest: The SCP ensures all new S3 buckets and DynamoDB tables are encrypted using the specified KMS key.
+Least Privilege Access Controls: The key policy restricts kms:Decrypt permissions to only the necessary AWS services.
+Effective and Enforceable:
+
+SCPs: Apply at the organizational level, ensuring compliance across all accounts.
+Key Policies: Control access to the KMS key at a granular level.
+Operational Efficiency:
+
+Automated Enforcement: Reduces the need for manual checks or alerts.
+Scalable Solution: Works across multiple accounts managed by AWS Organizations.
+
 
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">

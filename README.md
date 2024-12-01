@@ -1137,6 +1137,33 @@ Automated Enforcement: Reduces the need for manual checks or alerts.
 Scalable Solution: Works across multiple accounts managed by AWS Organizations.
 
 
+
+
+
+<img width="853" alt="image" src="https://github.com/user-attachments/assets/a64db2fe-52ef-4c6c-8610-a8e7201cd0fa">
+
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/a907065c-3852-4f6e-8ba4-bbd0dfc7d0a7">
+
+<img width="1102" alt="image" src="https://github.com/user-attachments/assets/522f1b17-832a-4c48-86b8-b09ae0d9b6a8">
+
+<img width="1106" alt="image" src="https://github.com/user-attachments/assets/097b2784-b4dd-4e7e-81e0-49b8151e13ba">
+<img width="701" alt="image" src="https://github.com/user-attachments/assets/7b5f00f6-fbbe-42ce-8cbd-f9d35b617ed7">
+
+
+<img width="1060" alt="image" src="https://github.com/user-attachments/assets/f2407de3-9517-4fd2-9f1c-db5e062d22fc">
+<img width="796" alt="image" src="https://github.com/user-attachments/assets/0a263c0c-4f75-40db-85ee-1c65ad3a2c3e">
+
+<img width="1020" alt="image" src="https://github.com/user-attachments/assets/ad3c1466-d9f0-4340-beeb-3eb763605dd6">
+<img width="1167" alt="image" src="https://github.com/user-attachments/assets/0a4e44b4-8b4d-460c-ae19-23657fc39e87">
+
+<img width="1344" alt="image" src="https://github.com/user-attachments/assets/f9e11d1c-86d9-4aed-a35a-cfcf1ee8965f">
+<img width="655" alt="image" src="https://github.com/user-attachments/assets/8b331462-7797-4998-b2bf-63e01c519ebc">
+
+
+<img width="1123" alt="image" src="https://github.com/user-attachments/assets/978fba97-c609-4ebc-a09e-40d53a2fcb5f">
+The correct answer is A because GuardDuty can detect and alert on EC2 instance credential exfiltration events.These events indicate that the credentials obtained from the EC2 instance metadata service are being used from an IP address that is owned by a different AWS account than the one that owns the instance1.GuardDuty can also provide details such as the source and destination IP addresses, the AWS account ID of the attacker, and the API calls made using the exfiltrated credentials2.
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

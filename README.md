@@ -1164,6 +1164,30 @@ Scalable Solution: Works across multiple accounts managed by AWS Organizations.
 The correct answer is A because GuardDuty can detect and alert on EC2 instance credential exfiltration events.These events indicate that the credentials obtained from the EC2 instance metadata service are being used from an IP address that is owned by a different AWS account than the one that owns the instance1.GuardDuty can also provide details such as the source and destination IP addresses, the AWS account ID of the attacker, and the API calls made using the exfiltrated credentials2.
 
 
+
+
+
+2024/12/02
+<img width="1042" alt="image" src="https://github.com/user-attachments/assets/419a0742-630f-4849-a051-454e512e8c0e">
+<img width="775" alt="image" src="https://github.com/user-attachments/assets/89b39545-937d-4322-8467-ed48a6978195">
+
+<img width="1033" alt="image" src="https://github.com/user-attachments/assets/c367bc05-aa86-44d8-a15d-b75c6a40dffd">
+<img width="1027" alt="image" src="https://github.com/user-attachments/assets/edd87029-56a1-4644-a992-dc00627e5238">
+
+<img width="1031" alt="image" src="https://github.com/user-attachments/assets/b73ec5d4-d3a6-4cf6-b0ec-c62bff723477">
+<img width="598" alt="image" src="https://github.com/user-attachments/assets/0f7d6fa6-80c0-4ce5-b74a-c6e90ac024c9">
+
+<img width="1055" alt="image" src="https://github.com/user-attachments/assets/cd82aae2-1716-42c0-aeb2-6971b3e5a585">
+
+<img width="1099" alt="image" src="https://github.com/user-attachments/assets/4035e00a-b3ee-492f-ba5a-5eb43719e4ee">
+<img width="726" alt="image" src="https://github.com/user-attachments/assets/138351bb-2e81-43aa-b4bb-39ac065448e4">
+
+<img width="1042" alt="image" src="https://github.com/user-attachments/assets/b7ccd980-349b-404e-8176-28ce6cd986df">
+<img width="744" alt="image" src="https://github.com/user-attachments/assets/7b7398c5-0a43-4235-8196-98bf5b91c723">
+<img width="704" alt="image" src="https://github.com/user-attachments/assets/931575ec-55d2-47c8-8c01-5ff6b3da0d03">
+
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

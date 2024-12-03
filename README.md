@@ -1188,6 +1188,13 @@ The correct answer is A because GuardDuty can detect and alert on EC2 instance c
 
 
 
+2024/12/03
+
+<img width="1034" alt="image" src="https://github.com/user-attachments/assets/8eaae883-0567-404b-b79b-73eabbb5791d">
+<img width="793" alt="image" src="https://github.com/user-attachments/assets/52fb9ec2-c19b-4363-8a04-017f0de26020">
+<img width="766" alt="image" src="https://github.com/user-attachments/assets/b9fbb9a6-27a4-4ed9-8e69-267fbffd4a99">
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

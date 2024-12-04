@@ -1195,6 +1195,33 @@ The correct answer is A because GuardDuty can detect and alert on EC2 instance c
 <img width="766" alt="image" src="https://github.com/user-attachments/assets/b9fbb9a6-27a4-4ed9-8e69-267fbffd4a99">
 
 
+<img width="1129" alt="image" src="https://github.com/user-attachments/assets/05bd88aa-825d-465e-851b-e4964ad44bd9">
+<img width="773" alt="image" src="https://github.com/user-attachments/assets/5c41a2d2-e6f9-4c6e-8573-5bbc0d68df5f">
+<img width="723" alt="image" src="https://github.com/user-attachments/assets/9647f46e-d27c-436f-8b29-0f8451da8df5">
+
+2024/12/04
+<img width="1078" alt="image" src="https://github.com/user-attachments/assets/b3c2ba33-90a8-4e1f-9f6e-9150e31ac0b9">
+<img width="1054" alt="image" src="https://github.com/user-attachments/assets/161dd718-72a9-4a1c-bf81-421e52b0cd66">
+<img width="1050" alt="image" src="https://github.com/user-attachments/assets/f61f898b-a690-4634-bef5-09ed274e8b25">
+
+<img width="1051" alt="image" src="https://github.com/user-attachments/assets/cb584b7f-5171-4bfb-bb1d-3707e04f2109">
+<img width="1020" alt="image" src="https://github.com/user-attachments/assets/eb20f00c-a245-4e90-8c02-f3c996b0a7b7">
+<img width="805" alt="image" src="https://github.com/user-attachments/assets/92079a48-c5dd-4206-9408-a424e67c555b">
+
+<img width="1021" alt="image" src="https://github.com/user-attachments/assets/296abe4f-ecde-4316-bebd-45c24a9c5da7">
+<img width="1037" alt="image" src="https://github.com/user-attachments/assets/2a5a7061-9d57-4bfc-a0e8-02a2d9efbd26">
+
+<img width="979" alt="image" src="https://github.com/user-attachments/assets/df39d178-c0c4-433b-b300-bda42c96b178">
+
+
+<img width="890" alt="image" src="https://github.com/user-attachments/assets/bf60eb03-64b9-464d-9b32-b645ad5b0c7f">
+
+<img width="865" alt="image" src="https://github.com/user-attachments/assets/b98e5019-0088-4a94-b7ed-eecc999340d8">
+
+
+<img width="875" alt="image" src="https://github.com/user-attachments/assets/d2573163-6b79-494d-9671-488829b2023c">
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

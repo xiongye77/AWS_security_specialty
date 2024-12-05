@@ -1238,6 +1238,75 @@ The correct answer is A because GuardDuty can detect and alert on EC2 instance c
 
 
 
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/b8e7ea99-b0ce-4c3b-a75d-3b5e9af84bcb">
+
+
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/38c9b69d-ca65-4aa0-aeeb-54e6f7d31e90">
+
+Explanation:
+
+Context and Requirements:
+
+The company uses AWS Organizations and currently has two AWS accounts.
+They expect to add more than 50 AWS accounts in the next 12 months.
+All existing AWS accounts have Amazon GuardDuty active.
+They currently review GuardDuty findings by logging into each AWS account individually.
+Requirements:
+
+Centralized View of GuardDuty Findings:
+
+The company wants a centralized view of GuardDuty findings for existing and future AWS accounts.
+Automatic GuardDuty Enablement:
+
+Ensure any new AWS account has GuardDuty automatically turned on.
+Solution Overview:
+
+To meet these requirements, the company should:
+
+Designate a delegated administrator account for GuardDuty within the organization.
+Enable GuardDuty in this delegated administrator account.
+Configure GuardDuty to aggregate findings from all member accounts.
+Set up automatic enrollment of new AWS accounts into GuardDuty.
+Option B Details:
+
+Create a New AWS Account in the Organization:
+
+It's a best practice to have a dedicated security account for centralized security services.
+This account acts as the delegated administrator for GuardDuty.
+Enable GuardDuty in the New Account:
+
+Activate GuardDuty in the new security account.
+This account will collect and aggregate findings from member accounts.
+Designate the New Account as the Delegated Administrator for GuardDuty:
+
+Use AWS Organizations to delegate administration of GuardDuty to the new account.
+This allows centralized management and monitoring of GuardDuty across the organization.
+Configure GuardDuty to Add Existing Accounts as Member Accounts:
+
+Invite or add existing AWS accounts as member accounts in GuardDuty.
+The delegated administrator account can view and manage findings from these member accounts.
+Select the Option to Automatically Add New AWS Accounts to the Organization:
+
+Enable auto-enable in GuardDuty to automatically include new AWS accounts as member accounts.
+This ensures that any new accounts added to the organization will have GuardDuty enabled by default.
+Why Option B is Correct:
+
+Meets Requirement 1 (Centralized View):
+
+Aggregates GuardDuty findings from all existing and future AWS accounts into the delegated administrator account.
+Provides a single pane of glass for security monitoring.
+Meets Requirement 2 (Automatic Enablement):
+
+The auto-enable feature in GuardDuty ensures that new accounts automatically have GuardDuty enabled and are added as member accounts.
+Follows Best Practices:
+
+Using a dedicated security account aligns with AWS security best practices for centralized security management.
+
+
+
+<img width="909" alt="image" src="https://github.com/user-attachments/assets/a16f79c7-620f-460c-aabf-c75609b18e09">
+
 
 
 

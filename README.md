@@ -1222,6 +1222,26 @@ The correct answer is A because GuardDuty can detect and alert on EC2 instance c
 <img width="875" alt="image" src="https://github.com/user-attachments/assets/d2573163-6b79-494d-9671-488829b2023c">
 
 
+2024/12/05
+<img width="894" alt="image" src="https://github.com/user-attachments/assets/89866c44-9245-4dd8-8d00-acc14d3272d4">
+<img width="689" alt="image" src="https://github.com/user-attachments/assets/af52c3bd-a935-40a5-ad19-38669ece0df8">
+
+<img width="920" alt="image" src="https://github.com/user-attachments/assets/aa426da1-6460-413e-86d6-4665743fb99e">
+<img width="628" alt="image" src="https://github.com/user-attachments/assets/877c498e-1ad9-4efe-86e5-ec34608d9f7c">
+
+<img width="840" alt="image" src="https://github.com/user-attachments/assets/09345bff-ef16-428d-ab5c-4e46b2b284af">
+
+<img width="924" alt="image" src="https://github.com/user-attachments/assets/9a48cd80-aa26-455a-9472-1fd7cd98a256">
+<img width="773" alt="image" src="https://github.com/user-attachments/assets/4602474c-6bdc-4e82-aae5-8f43a54cc13a">
+
+
+
+
+
+
+
+
+
 <img width="633" alt="image" src="https://github.com/user-attachments/assets/af4dbe2d-66f6-40c5-88e0-4611179afa11">
 <img width="635" alt="image" src="https://github.com/user-attachments/assets/2459b11c-e200-455c-ba4e-6e61d4163a30">
 <img width="1101" alt="image" src="https://github.com/user-attachments/assets/99a0a719-ecdc-42ea-8720-f4b4054650bc">

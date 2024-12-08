@@ -1,5 +1,165 @@
 # AWS_security_specialty
 
+2024/12/06
+<img width="971" alt="image" src="https://github.com/user-attachments/assets/1f813da9-d362-4f1f-ba01-eb5df41d2889">
+
+Explanation:
+Requirement:
+
+The solution must allow seamless encryption for S3 objects.
+Users should not directly manage encryption keys.
+Keys must be immediately deletable if necessary.
+Why Option B is Correct:
+
+AWS KMS allows importing key material into a customer managed CMK (Customer Master Key). This means you retain control over the key material.
+If you need to immediately delete the key, you can use the DeleteImportedKeyMaterial API to remove the key material from AWS KMS. This action renders the key unusable instantly.
+This approach meets the scalability and key management requirements, as AWS KMS handles the integration with S3 for seamless encryption.
+
+
+<img width="915" alt="image" src="https://github.com/user-attachments/assets/685880af-3759-4d02-8d0c-7e7af343c7b0">
+<img width="680" alt="image" src="https://github.com/user-attachments/assets/0d3f57bf-d937-48f5-88fe-5921834ff482">
+
+
+
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/29f4e84b-e0b3-4d26-a886-e6826a2b06cd">
+Explanation:
+Why Option A is Correct:
+Operational Efficiency:
+
+This solution allows the existing script to run successfully with the currently attached AWS managed IAM policies.
+While the script runs, CloudTrail collects activity logs that show exactly which AWS services and actions are used.
+IAM Access Analyzer can then generate a least privilege policy based on the collected logs, ensuring no unnecessary permissions are included.
+Least Privilege Enforcement:
+
+The IAM Access Analyzer uses the data from CloudTrail to construct a new, least privilege policy. This policy replaces the broad permissions provided by the AWS managed IAM policies.
+Minimal Disruption:
+
+The existing managed IAM policies remain attached during the analysis, ensuring the script functions correctly during the process.
+Once the least privilege policy is created and tested, it can replace the managed IAM policies.
+
+
+
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/6681af4a-386c-41c0-8c5b-49e6adf771fc">
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/67a0aabf-a657-44ef-bca3-27bd8b62159c">
+
+
+
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/631e7750-0b13-4f75-bd74-69136b1d3ee2">
+<img width="814" alt="image" src="https://github.com/user-attachments/assets/e9b127a9-1ea1-4e43-ad27-b334cc5bbf11">
+
+
+<img width="1043" alt="image" src="https://github.com/user-attachments/assets/761d053a-5afc-4232-bd0d-bca8a822ff5d">
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/b251e907-514a-4b0e-abbd-01c94b356994">
+
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/3d95b424-9e0f-4b0c-bd41-65bb47c17580">
+<img width="740" alt="image" src="https://github.com/user-attachments/assets/1afa3407-bcc7-4460-8453-ca474ca765ce">
+
+<img width="899" alt="image" src="https://github.com/user-attachments/assets/832c6dfb-518d-4680-b52d-847a072c1e13">
+
+
+<img width="967" alt="image" src="https://github.com/user-attachments/assets/45c1ffb4-4746-46f1-b2df-9af3920c5840">
+
+
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/baed3282-8169-45bd-94da-9700b3143d15">
+<img width="697" alt="image" src="https://github.com/user-attachments/assets/ad152efa-7931-474d-ad43-5342b221f1b3">
+
+
+<img width="962" alt="image" src="https://github.com/user-attachments/assets/d1f5c5c7-1352-49af-8fd4-bd9d6e001301">
+
+<img width="955" alt="image" src="https://github.com/user-attachments/assets/a6dd0ce8-2aa2-45bd-aafc-63b71cc0e3e5">
+<img width="729" alt="image" src="https://github.com/user-attachments/assets/069a6805-aafc-45a1-ab28-1b30ee212ff8">
+
+
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/cd985439-07c0-4da1-91a5-374a6169e86d">
+
+
+
+<img width="968" alt="image" src="https://github.com/user-attachments/assets/540c43d5-af68-49b6-aa7e-edef7a6752a6">
+<img width="792" alt="image" src="https://github.com/user-attachments/assets/0789b392-f044-42ed-9cf5-49f49c27db22">
+
+<img width="901" alt="image" src="https://github.com/user-attachments/assets/eedc0013-10e7-4fd8-a56c-32ffefcf6714">
+
+
+<img width="934" alt="image" src="https://github.com/user-attachments/assets/2570e24b-a917-4cb4-8a1e-24a99520e431">
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/f2f74373-e800-42e2-9443-cd0214c60d97">
+
+<img width="898" alt="image" src="https://github.com/user-attachments/assets/094fb7cf-bb0a-4d85-a1f9-f658083aebf3">
+<img width="703" alt="image" src="https://github.com/user-attachments/assets/d81858a7-837f-4b8d-ac1d-f614188d5047">
+
+
+<img width="972" alt="image" src="https://github.com/user-attachments/assets/5e84a052-7730-4611-a568-aaae43c8938c">
+
+<img width="937" alt="image" src="https://github.com/user-attachments/assets/275e2fef-2bbe-4cef-a0dd-576ef8d08e3f">
+
+
+<img width="964" alt="image" src="https://github.com/user-attachments/assets/67caf9b5-d736-4896-a2e6-f19a63c1406c">
+
+
+<img width="929" alt="image" src="https://github.com/user-attachments/assets/eb4475a6-f229-4285-a16e-825f265b6a84">
+
+
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/665ef715-635e-4de8-b577-bf391a6f1bf3">
+
+
+<img width="903" alt="image" src="https://github.com/user-attachments/assets/c647e72c-55cc-4d97-a11c-b8706b8ccbcc">
+
+
+<img width="994" alt="image" src="https://github.com/user-attachments/assets/e5735fbc-f323-412b-a6a0-32fe4d15b638">
+
+<img width="937" alt="image" src="https://github.com/user-attachments/assets/376641be-66f6-4d20-a465-e5cbd1bd5168">
+
+<img width="939" alt="image" src="https://github.com/user-attachments/assets/273f328c-412c-40d1-b59b-1f62e8608776">
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/aec46621-9518-44a8-aa0c-7879cb41f94b">
+
+Answer: A and C
+
+Explanation:
+
+To assume a role in another account, two conditions must be met:
+
+The calling role (LambdaAuditRole) must have permission to assume the target role (AcmeAuditFactoryRole).
+
+This means the IAM policy attached to LambdaAuditRole must include the sts:AssumeRole action for the AcmeAuditFactoryRole. (Option A)
+The trust policy on the target role (AcmeAuditFactoryRole) must allow the calling role (LambdaAuditRole) to assume it.
+
+The trust policy of AcmeAuditFactoryRole must specify LambdaAuditRole as a trusted principal and allow the sts:AssumeRole action. (Option C)
+When both these conditions are met, the LambdaAuditRole can successfully call sts:AssumeRole to assume AcmeAuditFactoryRole across AWS accounts.
+
+
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/b222f3ea-5d12-45f1-b91a-486f8bf1100f">
+<img width="811" alt="image" src="https://github.com/user-attachments/assets/90dd4fd6-6bf7-4cc5-af45-d9940a0f5c0d">
+
+
+
+<img width="1044" alt="image" src="https://github.com/user-attachments/assets/c7360670-d0bb-4795-bbc5-8af9a4601d93">
+
+
+
+<img width="694" alt="image" src="https://github.com/user-attachments/assets/07ea9dca-d721-4b92-9816-dc3c079d6b45">
+<img width="873" alt="image" src="https://github.com/user-attachments/assets/2b35a6e2-a42c-4a2c-b47d-760ab2e66f6f">
+
+
+<img width="1169" alt="image" src="https://github.com/user-attachments/assets/73e24d03-21de-4e27-9aa4-994f6921b0af">
+
+
+<img width="1205" alt="image" src="https://github.com/user-attachments/assets/fe73b121-5aed-44c7-ba0b-7fcc600bc586">
+
+<img width="1140" alt="image" src="https://github.com/user-attachments/assets/baef3c28-0e74-4ddc-baa5-3ef39fb20f4a">
+
+<img width="1130" alt="image" src="https://github.com/user-attachments/assets/ce81b5de-3093-4209-afba-a9b64009149c">
+
+<img width="1120" alt="image" src="https://github.com/user-attachments/assets/ee9a737a-4066-4533-b6f0-dfe674747655">
+
+
+<img width="1118" alt="image" src="https://github.com/user-attachments/assets/c84dd2c8-b1bb-46ef-90ea-1d07c69d7f30">
+
+<img width="1134" alt="image" src="https://github.com/user-attachments/assets/c45b99a9-2aa8-4a55-849e-42c4bc6a3f96">
+
 
 Q1. An application outputs logs to a text file. The logs must be continuously monitored for security incidents.Which design will meet the requirements with MINIMUM effort?
 A. Create a scheduled process to copy the component's logs into Amazon S3.

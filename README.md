@@ -1,6 +1,17 @@
 # AWS_security_specialty
 
 2024/12/06
+
+<img width="1122" alt="image" src="https://github.com/user-attachments/assets/b8aedf00-4802-4275-800a-b20b6f5abae8">
+<img width="840" alt="image" src="https://github.com/user-attachments/assets/9c7cd09b-271f-4e23-a0ac-f1729e8cc355">
+
+<img width="1111" alt="image" src="https://github.com/user-attachments/assets/d54bbbdf-a4a6-45a5-a61f-fb9c1492e845">
+
+<img width="1121" alt="image" src="https://github.com/user-attachments/assets/3491c344-9558-4101-8bdf-e7b529c6e006">
+
+<img width="1146" alt="image" src="https://github.com/user-attachments/assets/2344368a-a2c7-4d25-b0a2-7180def41abf">
+
+
 <img width="971" alt="image" src="https://github.com/user-attachments/assets/1f813da9-d362-4f1f-ba01-eb5df41d2889">
 
 Explanation:

@@ -1,5 +1,34 @@
 # AWS_security_specialty
 
+2024/12/11
+<img width="1198" alt="image" src="https://github.com/user-attachments/assets/4abe9b8f-ebf3-4fde-a9cc-9005e285a73c">
+Explanation
+The requirements are:
+
+No AWS API calls from the EC2 instances can travel over the internet.
+This means all traffic to S3 and KMS must remain within the AWS network, and must use VPC endpoints.
+
+Use existing code without changes:
+The solution must allow all required actions without code changes, so we need to ensure that all necessary S3 actions (including PutObjectAcl if currently used by the application) and KMS actions are allowed through the endpoints.
+
+Cross-account access with encryption:
+The S3 bucket and the KMS key are in Account A, and the EC2 instances are in Account B. The solution must ensure that Account B can use a private path to access S3 (gateway endpoint) and KMS (interface endpoint).
+
+Analyzing the Options
+Option A: Gateway VPC endpoint for S3 in Account B
+
+A gateway VPC endpoint for Amazon S3 is the standard, cost-effective approach to provide private network access to S3.
+The resource policy of the gateway endpoint can allow s3:GetObject, s3:ListBucket, s3:PutObject, and s3:PutObjectAcl actions as needed by the application.
+This ensures that S3 requests do not go over the internet.
+Option C: Interface VPC endpoint for KMS in Account B with private DNS on
+
+By default, KMS is accessed via public endpoints. To keep the KMS traffic internal and not route over the internet, you must use a VPC interface endpoint.
+Enabling private DNS ensures the KMS API calls are directed to the VPC endpoint instead of the public endpoint, keeping traffic internal.
+The resource policy on the interface endpoint can be configured to allow kms:Encrypt, kms:Decrypt, and kms:GenerateDataKey so that the EC2 instances can work with the encrypted S3 objects.
+This combination allows both S3 and KMS operations to remain within AWS internal networks, meeting the security and compliance needs without code changes.
+
+
+
 2024/12/10
 <img width="1149" alt="image" src="https://github.com/user-attachments/assets/a01cd1b7-4ed7-49b8-baf7-34c44b9aae93">
 

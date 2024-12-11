@@ -2,8 +2,155 @@
 
 2024/12/11
 
+<img width="776" alt="image" src="https://github.com/user-attachments/assets/3ea0fe8e-4643-408c-a8c5-67dc3ced5d58">
+
+
+Thought for 10 seconds
+Correct Answer: A
+
+Explanation
+AWS KMS is generally used to protect data keys that you use to encrypt or decrypt large amounts of data. For small amounts of data (up to about 4 KB), however, you can use KMS keys directly to encrypt the data without generating a separate data key. Since the file in question is only 2 KB, it can be encrypted directly with the aws kms encrypt command and the existing KMS key.
+
+Why Option A Is Correct:
+
+The aws kms encrypt command can directly encrypt small pieces of data (less than 4 KB). The 2 KB file falls within this limit.
+This approach is straightforward and does not require generating and managing additional keys.
+Why the Other Options Are Incorrect:
+
+Option B: aws kms create-grant is used to delegate permissions for the KMS key to another principal. It doesn't encrypt data directly and is unnecessary here.
+Option C: aws kms encrypt does not generate data keys. It directly encrypts the provided plaintext data. To generate data keys, you must use the aws kms generate-data-key command.
+Option D: While aws kms generate-data-key does create a data key, you must use the plaintext data key to encrypt the file. The encrypted data key returned by the command is for storage, not for encryption. Since the file is already small enough for direct encryption, generating a data key is not required.
+Conclusion
+For a 2 KB file, using aws kms encrypt directly (Option A) is the simplest and most appropriate solution.
+
+<img width="891" alt="image" src="https://github.com/user-attachments/assets/f4808815-572a-4726-9728-9c915004add7">
+<img width="791" alt="image" src="https://github.com/user-attachments/assets/a82d543e-a8d8-4251-a60e-8838e932dba5">
+
+
 <img width="1137" alt="image" src="https://github.com/user-attachments/assets/801e9464-ff5f-40d2-9ba9-d644b9445d1b">
 <img width="1131" alt="image" src="https://github.com/user-attachments/assets/5a59f739-d2e0-48c8-93ea-7c844ea82c33">
+
+
+Thought for a few seconds
+Correct Answer: B
+
+Explanation
+Amazon Cognito user authentication events, including successful and unsuccessful login attempts, are recorded by AWS CloudTrail when Cognito is used as an identity provider. Each login attempt can be identified by the InitiateAuth event name, and the event source will be cognito-idp.amazonaws.com.
+
+Key Steps:
+
+Enable AWS CloudTrail: By enabling CloudTrail for your AWS account, login attempts to Cognito user pools are captured.
+Delivery to Amazon S3: The CloudTrail logs are delivered to an S3 bucket.
+Query with Amazon Athena: Using Athena, you can write SQL queries to filter the CloudTrail logs stored in S3 by event name (InitiateAuth) and event source (cognito-idp.amazonaws.com). This lets you analyze both successful and failed login attempts.
+Why Option B is Correct
+Full Audit of Login Attempts: CloudTrail logs all API calls, including Cognito login attempts (InitiateAuth events), enabling a complete record of user activities.
+Query with Athena: Once the logs are in S3, Athena can efficiently query the JSON-formatted CloudTrail logs using standard SQL. This provides a convenient way to filter on event name, event source, and success or failure attributes.
+
+
+
+<img width="697" alt="image" src="https://github.com/user-attachments/assets/2cec1d4a-64a0-4af9-830a-6a6f3f00abd0">
+<img width="905" alt="image" src="https://github.com/user-attachments/assets/817026fd-c01f-4de1-aed5-22e997d2a123">
+
+<img width="1147" alt="image" src="https://github.com/user-attachments/assets/8f0b650d-dad1-4ca5-95e3-b0730d1cb605">
+
+<img width="1148" alt="image" src="https://github.com/user-attachments/assets/60ee992d-2ae7-4af1-9f4b-5c5f44a5a77d">
+<img width="657" alt="image" src="https://github.com/user-attachments/assets/489b42f1-591b-44b1-b1cd-070850f365d6">
+
+
+
+
+<img width="717" alt="image" src="https://github.com/user-attachments/assets/88a6af15-3f0e-47d8-81a3-ad61996617ee">
+
+
+Thought for a second
+Correct Answer: A
+
+Explanation
+The requirement is to automatically report vulnerabilities discovered by Amazon ECR enhanced scanning to a Slack channel. The scanning engine for ECR images is integrated with Amazon Inspector, which means the findings will appear as Amazon Inspector findings. The simplest and most operationally efficient solution involves using Amazon EventBridge, Amazon SNS, and AWS Chatbot together:
+
+Amazon Inspector:
+Configure Amazon Inspector to run enhanced scans on the ECR repository. When vulnerabilities are found, Inspector generates findings.
+
+EventBridge Rule:
+Create an EventBridge rule that triggers on Amazon Inspector findings. This avoids manual polling or complex orchestration.
+
+Amazon SNS:
+Set the EventBridge rule to send the Inspector findings to an SNS topic. SNS acts as a message hub and can fan out notifications to multiple endpoints.
+
+AWS Chatbot:
+Configure AWS Chatbot with Slack to consume messages from the SNS topic. AWS Chatbot provides a native integration with Slack, making it straightforward to deliver notifications to a Slack channel.
+
+This combination leverages managed services with minimal coding and infrastructure. The pipeline is event-driven and serverless, ensuring high operational efficiency and reduced maintenance overhead.
+
+
+
+<img width="783" alt="image" src="https://github.com/user-attachments/assets/df263e54-3aa3-4729-8161-bf3c85401b35">
+<img width="774" alt="image" src="https://github.com/user-attachments/assets/aecbf9b3-d31d-43bf-abb1-a31d27e588f7">
+
+
+<img width="846" alt="image" src="https://github.com/user-attachments/assets/464b585f-e718-4be8-ad8d-c56cc963052e">
+<img width="1136" alt="image" src="https://github.com/user-attachments/assets/902857bf-3052-44de-9d96-993212b1ba77">
+
+
+
+<img width="824" alt="image" src="https://github.com/user-attachments/assets/fd68943c-1e90-4bd5-bf7f-69ec116d7a7b">
+
+
+<img width="707" alt="image" src="https://github.com/user-attachments/assets/28764493-8b87-4164-8800-976fb14d6158">
+Explanation
+The Condition element in an Amazon S3 bucket policy can be used to restrict access based on specific attributes of the request. To ensure that only AWS accounts within the production OU can write VPC flow logs to the S3 bucket, the aws:SourceOrgPaths condition key should be used. This condition key allows the policy to check whether the request originates from an AWS account that is part of a specific organizational path in AWS Organizations.
+
+Why Option B is Correct:
+aws:SourceOrgPaths Key:
+
+The aws:SourceOrgPaths key checks the organizational path of the requester in AWS Organizations.
+By specifying the path to the production OU, the bucket policy ensures that only requests originating from accounts within the production OU can write to the bucket.
+Organizations Entity Path:
+
+The entity path of the production OU uniquely identifies the organizational structure leading to the production OU.
+Example entity path: /Root/Production.
+Aligns with Requirements:
+
+This approach ensures access is restricted only to accounts in the production OU, meeting the requirement precisely.
+
+
+<img width="1149" alt="image" src="https://github.com/user-attachments/assets/935ce876-be47-4991-a90c-9c27f5b46369">
+
+<img width="737" alt="image" src="https://github.com/user-attachments/assets/fb373d9f-b636-4f3f-abb6-1ca82ea89723">
+
+
+<img width="1142" alt="image" src="https://github.com/user-attachments/assets/9e3f2add-4764-4065-b86c-765b857d39e9">
+Explanation
+The solution must meet the following requirements:
+
+Allow application teams to provision their own IAM roles.
+Limit the scope of IAM roles.
+Prevent privilege escalation.
+Minimize operational overhead.
+Service Control Policies (SCPs) and permissions boundaries work together to enforce security controls across AWS accounts managed by AWS Organizations. By using these features, the security team can delegate role provisioning to application teams while maintaining centralized control over the permissions and scope of those roles.
+
+Why Option D is Correct:
+Service Control Policies (SCPs):
+
+SCPs control the maximum permissions allowed for all IAM roles in the organization.
+By attaching an SCP to the root OU, the security team can enforce global restrictions across all accounts and ensure that only roles with specific boundaries can create new roles.
+Permissions Boundaries:
+
+Permissions boundaries restrict the maximum permissions that IAM roles can grant to other roles or entities.
+This ensures that application teams cannot create roles with more privileges than allowed by the boundary.
+Delegation with Control:
+
+Application teams can create their own roles without waiting for the security team, reducing operational overhead.
+The permissions boundary ensures that the roles adhere to company policies and do not result in privilege escalation.
+Least Operational Overhead:
+
+SCPs and permissions boundaries require one-time setup and apply automatically to all accounts, reducing the need for ongoing manual intervention.
+
+<img width="705" alt="image" src="https://github.com/user-attachments/assets/7a7134fb-edb0-41db-b0e0-df26a6e55632">
+
+
+
+<img width="1125" alt="image" src="https://github.com/user-attachments/assets/9a81a273-168e-475f-b5d9-c2c7fa419099">
 
 
 <img width="1108" alt="image" src="https://github.com/user-attachments/assets/cf846901-01f3-496c-9ec5-8ef2e4ea43a3">

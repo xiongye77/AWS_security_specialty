@@ -1,6 +1,196 @@
 # AWS_security_specialty
 
 2024/12/11
+
+<img width="1137" alt="image" src="https://github.com/user-attachments/assets/801e9464-ff5f-40d2-9ba9-d644b9445d1b">
+<img width="1131" alt="image" src="https://github.com/user-attachments/assets/5a59f739-d2e0-48c8-93ea-7c844ea82c33">
+
+
+<img width="1108" alt="image" src="https://github.com/user-attachments/assets/cf846901-01f3-496c-9ec5-8ef2e4ea43a3">
+Explanation
+For AWS KMS keys with imported key material, you cannot enable automatic rotation. Keys with imported key material do not support auto-rotation due to the external management of the key material. To meet an annual rotation requirement, you must manually rotate the key by creating a new key with new imported key material and then pointing the key alias to the new key.
+
+Steps to Rotate a Key with Imported Material:
+
+Create a new customer managed key in AWS KMS and specify that you will import the key material.
+Generate and securely store the new key material according to your cryptographic policies.
+Import the new key material into the newly created KMS key.
+Update the key alias that your applications use to reference the new KMS key. This ensures that any systems using the alias will now use the rotated (new) key material without code changes.
+Retire or schedule deletion of the old key, if appropriate, after ensuring a smooth transition and that no workloads depend on it.
+By following these steps, you comply with the company's yearly key rotation requirement and maintain a transparent process for users and applications relying on the alias.
+
+
+<img width="1140" alt="image" src="https://github.com/user-attachments/assets/009f5ff5-c2b7-43c6-91d4-ad898927fa4a">
+
+<img width="1106" alt="image" src="https://github.com/user-attachments/assets/d6c1b93a-799e-4c1d-8754-51472ea5c371">
+
+
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/7a609f0b-a96e-4133-9f7a-ed8081fb3788">
+
+
+<img width="1123" alt="image" src="https://github.com/user-attachments/assets/f895faf6-edab-418c-ac28-5a595aa7bf4a">
+Explanation
+Amazon Macie recently introduced automated discovery which continuously and intelligently samples data from Amazon S3 buckets across the environment. This feature automatically identifies buckets that are likely to contain sensitive data based on the sampling results. When suspicious findings occur, security teams can then decide to run targeted, full scans on those specific buckets to further investigate and confirm the presence of sensitive data.
+
+Why Option C is Correct:
+
+Minimal Administrative Overhead:
+Automated discovery reduces manual effort by continuously evaluating your buckets without requiring you to set up scheduled scans or event-based triggers.
+Scalability and Efficiency:
+Macie automatically samples data from all the S3 buckets, providing an overview of which buckets may contain sensitive data. This makes it easier and more efficient to focus subsequent full scans only on those high-priority buckets.
+How It Works:
+
+Enable Macie automated discovery: Macie begins analyzing and profiling S3 buckets on an ongoing basis.
+Identify Potential Risk: Macie’s sampling identifies buckets that contain data patterns indicative of sensitive information.
+Focused Full Scans: Once a bucket is flagged as potentially containing sensitive data, the security engineer can run a detailed Macie scan on that specific bucket for a comprehensive analysis.
+
+
+
+
+<img width="1125" alt="image" src="https://github.com/user-attachments/assets/3db076e5-df6f-4b2b-810d-7a44d662e61d">
+
+
+Thought for a couple of seconds
+Correct Answer: C
+
+Explanation
+The requirement is to ensure that the application running behind a Network Load Balancer (NLB) in the parent company’s AWS account is only accessible to subsidiary companies, not exposed to the public internet. Managing allow lists with 1,500 subsidiary CIDR blocks for direct inbound traffic would be cumbersome and not easily scalable.
+
+Key Points:
+
+The NLB is a Layer 4 load balancer and does not support security groups.
+Using network ACLs (NACLs) or security groups directly to whitelist thousands of CIDR blocks is complex and inefficient.
+The application needs to remain private and restricted to known internal parties (the subsidiaries).
+Option C: AWS PrivateLink
+
+AWS PrivateLink provides private connectivity between VPCs, AWS services, and on-premises applications without exposing traffic to the public internet.
+By creating an endpoint service associated with the NLB in the parent company’s account, you allow subsidiary AWS accounts to create interface endpoints in their VPCs.
+These interface endpoints provide private, secure access to the application over AWS’s internal network, bypassing the public internet entirely.
+You only need to maintain a single set of rules in the parent account’s security group that grants access to the traffic from the PrivateLink endpoints.
+Each subsidiary account sets up a PrivateLink interface endpoint to connect to the parent’s endpoint service. This securely scales to 1,500 subsidiaries without managing large allow lists of CIDR blocks.
+Why Not the Other Options?
+
+Option A (NACL): NACLs are stateless and must be applied at a subnet level. Managing thousands of CIDR blocks in a NACL is error-prone and not easily scalable. Also, NACLs do not attach directly to NLBs or instances in a way that selectively enforces application-level access.
+Option B (Security Groups on NLB): Network Load Balancers do not support security groups. The approach of listing 1,500 CIDR blocks in a security group and applying it to the NLB is not possible.
+Option D (Security Groups with 1,500 CIDR Blocks on Instances): While you can attach a security group to EC2 instances, adding 1,500 CIDR blocks is cumbersome and not easily maintainable. Also, this still doesn’t prevent the NLB from being publicly reachable unless you also restrict NLB access routes. It doesn’t solve the scaling problem effectively.
+
+<img width="1144" alt="image" src="https://github.com/user-attachments/assets/b2da0462-13c3-4f96-8ef2-f034de68d22f">
+Explanation
+The company needs a solution that continually scans Amazon EC2 instances for software vulnerabilities and unintended network exposure. Amazon Inspector is specifically designed to address these requirements by scanning EC2 instances and container images in Amazon Elastic Container Registry (ECR) for vulnerabilities and misconfigurations.
+
+Why Option A is Correct:
+Amazon Inspector:
+
+It is a fully managed service designed to automatically scan EC2 instances and ECR repositories for software vulnerabilities (e.g., CVEs) and unintended network exposure.
+It uses hybrid scanning to perform vulnerability assessments and network exposure analysis.
+How It Works:
+
+Inspector runs vulnerability scans based on CVE databases to detect software vulnerabilities in installed packages.
+Inspector also monitors EC2 instance network configurations to identify unintended exposure.
+Findings are automatically prioritized and sent to AWS Security Hub or Amazon EventBridge for notifications and actions.
+Scan Mode:
+
+The hybrid scanning mode combines vulnerability scanning with network reachability analysis to provide a comprehensive security assessment.
+
+
+<img width="1137" alt="image" src="https://github.com/user-attachments/assets/d4fe4be7-1b23-4fc8-978c-b75f94dca32a">
+Why Option B is Correct:
+AWS Config Compliance Change Events:
+
+AWS Config generates compliance change events whenever a resource’s compliance status changes (e.g., from COMPLIANT to NON_COMPLIANT or vice versa).
+These events are automatically sent to EventBridge.
+Amazon EventBridge Rule:
+
+An EventBridge rule can be configured to capture compliance change events for the restricted-ssh rule.
+The rule can target an Amazon SNS topic, which provides the notification to the appropriate recipients.
+Near-Real-Time Notifications:
+
+EventBridge ensures near-real-time delivery of compliance notifications without the need for additional infrastructure like Lambda or CloudWatch.
+Steps:
+
+Configure the restricted-ssh managed rule in AWS Config.
+Create an EventBridge rule that filters compliance change events for the restricted-ssh rule.
+Set the EventBridge rule to send notifications to an Amazon SNS topic.
+Subscribe the desired endpoints (email, SMS, etc.) to the SNS topic.
+
+<img width="1456" alt="image" src="https://github.com/user-attachments/assets/d0a6e146-1471-4dc0-be1b-b1716e45941d">
+Explanation
+To enforce a required minimum password length for user passwords in the given environment, the security engineer needs to address the configurations for both AWS Cognito user pools and on-premises Active Directory (AD), as these are the systems managing user authentication.
+
+Why B (Update the password length policy in the Cognito configuration) is Correct:
+Amazon Cognito user pools have a built-in password policy configuration.
+The security engineer can directly set a minimum password length requirement in the Cognito user pool settings.
+This ensures that all users managed in the Cognito user pool comply with the updated password length policy.
+Steps:
+
+Navigate to the Cognito user pool in the AWS Management Console.
+Update the password policy to enforce a minimum password length under Policies > Password policy.
+Why C (Update the password length policy in the on-premises Active Directory configuration) is Correct:
+For users authenticated through IAM federated with on-premises Active Directory, password policies are controlled by the Active Directory configuration.
+The minimum password length requirement must be set in the Active Directory domain security policy to ensure compliance.
+Steps:
+
+Access the Active Directory domain controller.
+Update the Password Policy to specify the desired minimum password length.
+
+
+
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/db9e277e-a699-4ce7-a17d-afa597d007ef">
+Explanation
+When an EBS volume is encrypted with a customer managed KMS key that uses imported key material, the EBS volume’s data key can only be decrypted by that same key material. If the key material is deleted, the key becomes unusable, meaning that no new decrypt operations can be performed using that key.
+
+To recover and decrypt the data key for the EBS volume (and thereby regain access to the data), you must restore the original key material that was used to encrypt the volume.
+
+Key Points:
+
+Reimporting the Same Key Material:
+By reimporting the exact same key material into the existing customer managed key, you recreate the key’s original state. This allows AWS KMS to use the restored key to decrypt the EBS volume’s data key.
+
+No Need to Create a New Key:
+Creating a new key or importing new (different) key material will not help because the EBS volume is associated with the original key and key material. To decrypt the volume, you must have the original key material back in place.
+
+Once the Key is Restored:
+After successfully reimporting the same key material, the EBS volume can be attached to the EC2 instance and accessed as normal, since the KMS key can now decrypt the volume’s data key.
+
+
+
+<img width="1135" alt="image" src="https://github.com/user-attachments/assets/adca47a9-3d8d-471f-a463-4a56a737bf7b">
+
+Explanation
+Application Load Balancer (ALB) access logs are natively delivered to Amazon S3. From there, the standard best practice for analyzing and visualizing these logs involves the following steps:
+
+S3 for Log Storage:
+ALBs can be configured to write access logs directly to an S3 bucket. This is the only native, built-in logging option for ALB access logs.
+
+Analysis with Amazon Athena:
+After the logs are in S3, you can use Amazon Athena (a serverless, interactive query service) to query the ALB logs using standard SQL. Athena integrates directly with S3, allowing you to easily filter login attempts, identify suspicious IPs (e.g., bots), and extract insights.
+
+Visualization with Amazon QuickSight:
+Once you have queried and refined the data in Athena, you can connect Amazon QuickSight directly to Athena to create dashboards and visualization charts. QuickSight enables you to build rich, interactive visualizations of the login data, making it easy to spot trends, anomalies, and suspicious activity coming from known bad IPs.
+
+
+
+<img width="1163" alt="image" src="https://github.com/user-attachments/assets/9323aa97-411a-4a57-823e-a216e54ecfd5">
+
+Explanation
+For forensic preservation, it is essential to:
+
+Isolate the instance from any automated changes or additional traffic. This means removing it from the Auto Scaling group and deregistering it from the Application Load Balancer (ALB) so that no further changes occur.
+Capture volatile data (memory snapshot) while the instance is still running. Memory is ephemeral, so it must be collected before the instance is stopped to preserve evidence that only exists in memory.
+Create a snapshot of the EBS volume to preserve disk-based evidence. This ensures you have a point-in-time copy of the disk data.
+Stop the instance to prevent further changes and maintain the state of the preserved evidence.
+Let's analyze the options:
+
+Option A: Takes EBS snapshot and memory snapshot before isolating the instance. This leaves a window where the instance could be modified by the scaling group or receive traffic from the ALB, potentially contaminating the evidence.
+
+Option B: Takes the memory snapshot first but does not isolate the instance before doing so. The instance is still subject to changes from the scaling group and traffic from the ALB, which may alter evidence during collection.
+
+Option D: Involves stopping the instance before taking a memory snapshot. Once an instance is stopped, memory is lost. This makes a memory snapshot impossible and fails the requirement to preserve volatile evidence.
+
+
+<img width="718" alt="image" src="https://github.com/user-attachments/assets/0c79e9b9-f9ed-4aad-9fbb-ef23e2c903af">
+
+
 <img width="1198" alt="image" src="https://github.com/user-attachments/assets/4abe9b8f-ebf3-4fde-a9cc-9005e285a73c">
 Explanation
 The requirements are:

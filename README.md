@@ -1,5 +1,58 @@
 # AWS_security_specialty
 
+
+2024/12/14
+
+<img width="744" alt="image" src="https://github.com/user-attachments/assets/d5e5040a-e917-4437-920a-86424aec86c7" />
+<img width="803" alt="image" src="https://github.com/user-attachments/assets/55183e60-9095-4aec-8f8d-d06c1d8343c6" />
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/31ab8af3-1e66-4a65-a88a-4c8878d8f7f1" />
+<img width="711" alt="image" src="https://github.com/user-attachments/assets/582d4b7b-1f44-494d-a28f-1e1650eda261" />
+
+
+<img width="736" alt="image" src="https://github.com/user-attachments/assets/4bfd408b-95da-4311-8568-aac77e9d4ee6" />
+Recommended Solution:
+D. Use SCPs to deny all lambda:CreateFunctionUrlConfig and lambda:UpdateFunctionUrlConfig actions that have a lambda:FunctionUrlAuthType condition key value of NONE.
+
+Implementation Steps:
+Create an SCP: Define an SCP that specifically denies the lambda:CreateFunctionUrlConfig and lambda:UpdateFunctionUrlConfig actions when the lambda:FunctionUrlAuthType is set to NONE.
+
+json
+Copy code
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": [
+        "lambda:CreateFunctionUrlConfig",
+        "lambda:UpdateFunctionUrlConfig"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "lambda:FunctionUrlAuthType": "NONE"
+        }
+      }
+    }
+  ]
+}
+Attach the SCP to Production OU: Apply this SCP to the Organizational Unit (OU) that contains all production accounts. This ensures that the policy is enforced across all relevant accounts.
+
+Verify Enforcement: Test the policy by attempting to create or update a Lambda function URL with AuthType set to NONE in a production account. The action should be denied.
+
+Benefits of This Approach:
+Centralized Control: Manage policies from a single point within AWS Organizations.
+Automated Enforcement: Prevents unauthenticated function URLs without requiring developers to make changes.
+Scalable: Easily applies to hundreds of accounts under the organizational structure.
+Security Compliance: Ensures that production environments adhere to security best practices by enforcing authenticated access.
+Conclusion:
+Option D provides a robust, scalable, and low-overhead solution to prevent unauthenticated Lambda function URLs in production environments by leveraging SCPs within AWS Organizations.
+
+
+
+
+
+
 2024/12/13
 
 <img width="1453" alt="image" src="https://github.com/user-attachments/assets/cf0a5322-03a9-4edd-b4ac-910250a4d2c8">

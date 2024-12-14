@@ -1,5 +1,8 @@
 # AWS_security_specialty
 
+2024/12/15
+
+<img width="1007" alt="image" src="https://github.com/user-attachments/assets/4d7d958c-181d-403d-8abe-08d57cdc70fb" />
 
 2024/12/14
 

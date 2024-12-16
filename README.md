@@ -2,6 +2,47 @@
 
 2024/12/16
 
+
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/0b23ce1a-7b35-44b0-b2d7-1b9aa6463e6b" />
+
+
+<img width="920" alt="image" src="https://github.com/user-attachments/assets/d00bb38b-76bc-468e-aef5-68cb0b3b10c7" />
+2. Implementation Steps for Option D:
+Generate the IAM Credential Report:
+
+Via AWS Management Console:
+Navigate to the IAM Console.
+In the navigation pane, select Credential reports.
+Click on Generate report.
+Wait for the report generation to complete, then download the report.
+Via AWS CLI:
+bash
+Copy code
+aws iam generate-credential-report
+aws iam get-credential-report --query 'Content' --output text > credential-report.csv
+Analyze the Credential Report:
+
+Open the Report: The report is a CSV file containing detailed information about each IAM user and their credentials.
+Locate the Exposed Access Key:
+Search for the specific Access Key ID that was exposed.
+Check the AccessKeyLastUsedDate column to determine when the key was last used.
+Review the ServiceName and Region columns to understand which services and regions the key was utilized in.
+Assess the Impact:
+
+Determine Usage Patterns: Identify if the access key was used for legitimate purposes or if there are signs of unauthorized access.
+Take Further Actions if Necessary: If misuse is detected, additional steps such as rotating credentials, enhancing monitoring, or conducting a security audit may be warranted.
+3. Benefits of Using IAM Credential Reports:
+Simplicity: Generates a comprehensive overview without the need for complex configurations or integrations.
+Efficiency: Provides all necessary information in a single report, enabling quick decision-making.
+Cost-Effective: Utilizes existing AWS IAM capabilities without incurring additional costs or requiring third-party tools.
+Security Assurance: Helps ensure that no unauthorized actions were performed using the exposed access key.
+
+
+
+
+
+
+
 <img width="1089" alt="image" src="https://github.com/user-attachments/assets/56eec520-1be6-46b1-8f61-a0ec9c630df4" />
 
 <img width="1136" alt="image" src="https://github.com/user-attachments/assets/c0ac209c-dce0-4f7b-836e-902a1f785c1e" />

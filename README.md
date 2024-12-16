@@ -2,6 +2,67 @@
 
 2024/12/16
 
+<img width="1134" alt="image" src="https://github.com/user-attachments/assets/29dff453-05b4-4a7f-919c-561a4fa8b4a7" />
+
+
+<img width="1125" alt="image" src="https://github.com/user-attachments/assets/0f8cc8b4-4e74-44e1-b7c4-2bc50a3abf5d" />
+
+<img width="1129" alt="image" src="https://github.com/user-attachments/assets/9612f39a-6235-4190-8426-9d16db0057aa" />
+
+<img width="1149" alt="image" src="https://github.com/user-attachments/assets/9e7bd460-2b3f-4a4a-8b8b-208f19fdeb09" />
+
+
+<img width="799" alt="image" src="https://github.com/user-attachments/assets/7b24fd45-a152-42ee-a620-94d76f625b7d" />
+
+
+<img width="1134" alt="image" src="https://github.com/user-attachments/assets/fe73e93c-ef28-4ac9-a8f8-a2262ecf5c40" />
+Answer: A. Update the policy on the S3 gateway endpoint to allow the S3 actions only if the values of the aws:ResourceOrgID and aws:PrincipalOrgID condition keys match the company's values.
+
+Explanation
+The company's EC2 instances access Amazon S3 through an S3 gateway endpoint. By default, the endpoint is likely configured with a policy that allows broad access. To prevent data exfiltration, you must refine the access policy so that only requests that align with the company's organization are permitted.
+
+Key Considerations:
+
+S3 Gateway Endpoint Policies:
+Endpoint policies are resource-based policies attached to the S3 gateway endpoint. You can use these policies to impose fine-grained controls on all traffic flowing through the endpoint, regardless of the permissions on the instances' IAM roles.
+
+Organizational Condition Keys:
+AWS Organizations provides condition context keys (such as aws:ResourceOrgID and aws:PrincipalOrgID) that allow you to restrict actions to resources within the same organization. By leveraging these keys in the endpoint policy, you ensure that only S3 buckets belonging to your organization are accessible through this endpoint.
+
+Maintaining EC2 Job Functionality: By restricting the endpoint policy to only allow access to your organization's S3 buckets, the legitimate job — which uses the company's own buckets — will continue to function normally. Attempts to write or read data from outside buckets will fail, thus preventing exfiltration.
+
+
+
+
+
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/94c58912-2074-4476-9568-c35228ebc269" />
+
+B or D 
+
+
+
+
+<img width="1147" alt="image" src="https://github.com/user-attachments/assets/8bd3e187-1ac3-4845-8fda-30148e64f89c" />
+Explanation:
+Service Control Policies (SCPs) govern what actions can or cannot be performed across AWS accounts in an organization. To ensure that SCPs are following best practices, the security engineer needs to validate the policies for potential issues such as overly permissive permissions, syntax errors, or deprecated actions.
+
+Why Option A is Correct:
+AWS IAM Access Analyzer for Policy Validation:
+
+IAM Access Analyzer includes a policy validation feature that checks SCPs, identity-based policies, and resource-based policies for adherence to AWS best practices.
+It identifies issues such as:
+Deprecated or incorrect actions or resources.
+Overly broad permissions (e.g., using * for resources).
+Syntax errors or policy misconfigurations.
+Findings from these checks provide actionable insights to improve the security and effectiveness of SCPs.
+Direct SCP Relevance:
+
+SCPs are a type of policy, and IAM Access Analyzer is purpose-built for analyzing and improving policies, including SCPs.
+
+
+
+
+
 <img width="1173" alt="image" src="https://github.com/user-attachments/assets/ad04aadc-3ae2-4d14-9dc1-bd57c943782a" />
 
 <img width="1123" alt="image" src="https://github.com/user-attachments/assets/6c7edaa0-60eb-4cf4-bf09-53845ee60dcb" />

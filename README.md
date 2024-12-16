@@ -2,6 +2,22 @@
 
 2024/12/16
 
+![image](https://github.com/user-attachments/assets/73dfee8a-a046-47f1-8f34-91b2e3672349)
+
+<img width="1118" alt="image" src="https://github.com/user-attachments/assets/436b8faf-d9e0-4de6-b20b-648157d1f0ac" />
+
+
+<img width="1122" alt="image" src="https://github.com/user-attachments/assets/0dd10e18-ffe1-43f4-994d-8f7dccffd270" />
+
+<img width="1113" alt="image" src="https://github.com/user-attachments/assets/1d0c907d-1142-4254-9817-916c644a22b0" />
+
+
+<img width="1117" alt="image" src="https://github.com/user-attachments/assets/d05ba82f-d434-4dda-a9cb-e2866faa9d1b" />
+
+
+<img width="1116" alt="image" src="https://github.com/user-attachments/assets/61d46ca6-188f-4296-8b6c-5cbc6be34ba3" />
+
+
 <img width="1134" alt="image" src="https://github.com/user-attachments/assets/29dff453-05b4-4a7f-919c-561a4fa8b4a7" />
 
 

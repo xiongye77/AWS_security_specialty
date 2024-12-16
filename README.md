@@ -1,4 +1,30 @@
 # AWS_security_specialty
+
+2024/12/16
+
+<img width="1089" alt="image" src="https://github.com/user-attachments/assets/56eec520-1be6-46b1-8f61-a0ec9c630df4" />
+
+<img width="1136" alt="image" src="https://github.com/user-attachments/assets/c0ac209c-dce0-4f7b-836e-902a1f785c1e" />
+
+<img width="1123" alt="image" src="https://github.com/user-attachments/assets/684879c6-c450-4b73-8d6b-eaaa33c69991" />
+
+
+<img width="1114" alt="image" src="https://github.com/user-attachments/assets/bd3a1a11-8760-40f0-8826-f6c00f2cdbdc" />
+Why Option D is Correct:
+1. Native EventBridge Integration with ACM:
+Event Source: ACM automatically emits an event to Amazon EventBridge when a certificate is approaching expiration (typically 45 days or less).
+Predefined Event Pattern: EventBridge has a predefined event pattern for ACM, making configuration straightforward and eliminating the need for manual certificate tracking.
+2. Operational Efficiency:
+No Custom Logic: There is no need to write and maintain custom Lambda functions or scripts to monitor certificates.
+Real-Time Alerts: The solution works in real-time, triggering alerts as soon as the expiration threshold is met.
+3. Scalable Notification Mechanism:
+Amazon SNS Integration: The EventBridge rule can publish notifications directly to an SNS topic. This topic can deliver alerts via email, SMS, or other endpoints.
+Ease of Management: Adding or removing recipients from the SNS topic is simple, ensuring flexibility in notification management.
+4. Comprehensive Coverage:
+Supports Mixed Validation Methods: The EventBridge rule applies to both imported and ACM-managed certificates, regardless of validation method.
+
+
+
 2024/12/15
 <img width="1133" alt="image" src="https://github.com/user-attachments/assets/eb07b34c-acb1-4f91-8682-fc84c0e239ef" />
 

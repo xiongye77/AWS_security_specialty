@@ -2,6 +2,107 @@
 
 2024/12/17
 
+<img width="1115" alt="image" src="https://github.com/user-attachments/assets/adaaf966-1ad0-4930-885a-83104fb6b61c" />
+
+
+<img width="1117" alt="image" src="https://github.com/user-attachments/assets/ba74cac8-d450-4458-a198-3bc63d02d84e" />
+
+<img width="812" alt="image" src="https://github.com/user-attachments/assets/2d678054-d5d4-43a4-86bf-cd1561b6e438" />
+
+
+<img width="1116" alt="image" src="https://github.com/user-attachments/assets/a132025b-4e2e-4d77-bac3-9d035eb5d279" />
+
+
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/b44148b5-7f2d-4d97-afc0-c84008f481b1" />
+
+The correct answers are:
+
+A. In the Account B VPC, create a gateway VPC endpoint for Amazon S3. For the gateway VPC endpoint, create a resource policy that allows the s3:GetObject, s3:ListBucket, s3:PutObject, and s3:PutObjectAcl actions for the S3 bucket.
+C. In the Account B VPC, create an interface VPC endpoint for AWS KMS. For the interface VPC endpoint, create a resource policy that allows the kms:Encrypt, kms:Decrypt, and kms:GenerateDataKey actions for the KMS key. Ensure that private DNS is turned on for the endpoint.
+
+Explanation:
+The question requires the system to ensure that no AWS API calls from EC2 instances travel over the internet while accessing Amazon S3 and AWS KMS. Here's how the solutions meet these requirements:
+
+A. Gateway VPC Endpoint for Amazon S3
+Why it's correct:
+A gateway VPC endpoint allows secure, private access to Amazon S3 without using the public internet.
+Gateway endpoints are specifically used for AWS services like Amazon S3 and DynamoDB.
+By configuring a resource policy for the endpoint, you can control actions (e.g., s3:GetObject, s3:PutObject) allowed on the S3 bucket.
+This meets the requirement to securely access the S3 bucket in Account A without internet traffic.
+C. Interface VPC Endpoint for AWS KMS
+Why it's correct:
+AWS KMS API calls (e.g., kms:Encrypt, kms:Decrypt, kms:GenerateDataKey) travel over the public internet by default.
+An interface VPC endpoint for AWS KMS ensures that all KMS API calls stay within the private network, avoiding internet exposure.
+Enabling private DNS ensures that calls to KMS resolve to the private endpoint automatically, requiring no changes in the code.
+This allows the EC2 instances in Account B to interact with the KMS key in Account A securely and privately.
+
+
+Why Other Options Are Incorrect:
+B. Interface VPC Endpoint for Amazon S3:
+
+Interface endpoints are not the most efficient or cost-effective solution for S3 access. For S3, gateway VPC endpoints are the recommended option because they are designed for large-scale, cost-effective access to S3 buckets.
+D. Interface VPC Endpoint for KMS with private DNS turned off:
+
+If private DNS is turned off, the EC2 instances will still resolve KMS API calls to the public endpoint, which does not meet the requirement of avoiding internet traffic.
+E. S3 bucket policy with gateway VPC endpoint:
+
+While this option suggests using a gateway VPC endpoint for S3 (which is correct), it introduces additional bucket policy requirements (e.g., s3:PutObjectAcl).
+The bucket policy does not directly enforce secure access, and the solution is unnecessarily complex.
+
+
+
+
+
+
+
+<img width="1120" alt="image" src="https://github.com/user-attachments/assets/6575dea2-7aa8-4c36-ba30-4e15ab820838" />
+
+
+<img width="1112" alt="image" src="https://github.com/user-attachments/assets/aaa20dd7-4ae3-48ab-a0fc-a6cc672959a8" />
+
+
+<img width="1126" alt="image" src="https://github.com/user-attachments/assets/b815f5af-1d45-4518-bf6e-485e63d6d9b4" />
+
+
+<img width="1113" alt="image" src="https://github.com/user-attachments/assets/d2120872-8638-4c24-be99-8a4a7e5bea39" />
+
+<img width="1121" alt="image" src="https://github.com/user-attachments/assets/5bb7e904-b8e5-4d55-9897-779214cbc334" />
+
+
+<img width="1431" alt="image" src="https://github.com/user-attachments/assets/9af62da4-0b63-4165-adb3-efcd11a328ed" />
+
+
+
+<img width="1464" alt="image" src="https://github.com/user-attachments/assets/c91540bb-f641-4bb8-8905-35c81b40bb23" />
+
+
+Thought for 12 seconds
+Answer: A and B
+
+Explanation
+The requirements are:
+
+Perform custom validation at sign-up:
+Amazon Cognito supports this through Lambda triggers. Specifically, the pre sign-up trigger allows you to implement custom logic to accept or deny user registration requests. This trigger can, for instance, implement checks based on IP addresses, email patterns, or other heuristics to prevent fraudulent sign-ups.
+
+Accept or deny the registration request based on the validation results: The pre sign-up Lambda trigger lets you control whether a sign-up should proceed or fail by returning the appropriate response.
+
+Prevent sign-ups from outside a certain geographic region (in this case, outside of France): While Cognito itself doesn’t have a native geographic restriction setting, you can use AWS WAF to filter traffic at the network level before requests reach Cognito. By creating a geographic match rule in WAF, you can block requests from countries other than France. Associating the WAF web ACL with the Cognito Hosted UI endpoints ensures that only traffic from allowed countries even reaches the sign-up page, reducing fraudulent attempts.
+
+Why Options A and B?
+Option A (Pre sign-up AWS Lambda trigger): This allows for custom validation logic during the sign-up process. You can write code to determine if a user is allowed or denied based on certain criteria (e.g., IP address, domain of email, etc.). If the trigger decides to deny the request, Cognito will reject the sign-up.
+
+Option B (AWS WAF with a geographic match rule): By placing a web ACL with a geo match condition in front of your Cognito user pool hosted UI, you can block unwanted traffic from regions outside of France before it even reaches the sign-up logic. This reduces the load on your application and the likelihood of fraudulent sign-ups.
+
+
+
+
+
+
+
+
+<img width="1153" alt="image" src="https://github.com/user-attachments/assets/cbc2c4a1-83f5-46d2-bda5-43c2116c8029" />
+
 
 <img width="1111" alt="image" src="https://github.com/user-attachments/assets/0d4080a1-c602-47cb-8bf2-edad34a1bfd4" />
 

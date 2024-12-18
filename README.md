@@ -3,8 +3,71 @@
 2024/12/18
 
 
+<img width="860" alt="image" src="https://github.com/user-attachments/assets/250699bb-f65e-4560-bedc-f2960224a382" />
+
+<img width="878" alt="image" src="https://github.com/user-attachments/assets/13d51da8-6383-4c79-9ce5-bb93ac358a24" />
+
+
+<img width="1453" alt="image" src="https://github.com/user-attachments/assets/ac9fa2e7-797c-406c-96bd-222824004b09" />
+
+
+<img width="1422" alt="image" src="https://github.com/user-attachments/assets/0fb6103b-01b1-41a0-b59d-5a274cd51bfa" />
+
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/811664f9-b9ec-475f-85d3-48691bdf56e1" />
+Why Option D is Better
+Deny-first logic is generally safer and more predictable in network security.
+Option D explicitly ensures that the deny rule for port 3306 is evaluated before allowing other traffic, which aligns with security best practices for reducing the attack surface.
+
+
+
+
+<img width="1448" alt="image" src="https://github.com/user-attachments/assets/1445ff08-87c7-4ebd-a16a-ef25a60bbbe3" />
+
+
+<img width="1444" alt="image" src="https://github.com/user-attachments/assets/c3c148c6-95ca-4d52-ab96-31d0e12dea97" />
+
+
+<img width="1114" alt="image" src="https://github.com/user-attachments/assets/30cf115a-45e0-458c-a19e-0ca7120d3e49" />
+
+
+<img width="808" alt="image" src="https://github.com/user-attachments/assets/fc123430-d8e7-41f9-a560-942c9f6e1cf6" />
+
+<img width="1458" alt="image" src="https://github.com/user-attachments/assets/abe7198d-db7d-44d6-870e-fcbe75f7d146" />
+
+
+
+
+
+<img width="1427" alt="image" src="https://github.com/user-attachments/assets/cbf378a0-cd24-4eb0-9ca2-bcc14a31cef5" />
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyS3ActionsOutsideOrganization",
+      "Effect": "Deny",
+      "Action": "s3:*",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:ResourceOrgID": "${aws:PrincipalOrgID}"
+        }
+      }
+    }
+  ]
+}
+
+
+
+
+<img width="1123" alt="image" src="https://github.com/user-attachments/assets/274afc9e-c8bb-44bf-869f-5cd8b128a2e8" />
+
+
+<img width="1123" alt="image" src="https://github.com/user-attachments/assets/ef3da125-8930-43f8-8bd0-9ce72b8813f0" />
+
 
 <img width="1107" alt="image" src="https://github.com/user-attachments/assets/84f47ad3-69d6-4da4-b6a7-0f3ca5f9ee77" />
+CCCCCCCCCC
+
 
 
 

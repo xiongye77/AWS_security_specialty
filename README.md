@@ -1,5 +1,54 @@
 # AWS_security_specialty
 
+2024/12/18
+
+
+
+<img width="1107" alt="image" src="https://github.com/user-attachments/assets/84f47ad3-69d6-4da4-b6a7-0f3ca5f9ee77" />
+
+
+
+<img width="1450" alt="image" src="https://github.com/user-attachments/assets/f181803a-7cae-4beb-92c3-51c20d263cd1" />
+AEF 
+Explanation:
+To meet the company's requirements of identifying personal health information (PHI) inside Amazon S3 buckets, identifying publicly accessible S3 buckets, and collecting evidence for an upcoming audit with the least operational overhead, the following combination of AWS services is optimal:
+
+Identify PHI in S3 Buckets:
+
+A. Enable Amazon Macie. Run an on-demand sensitive data discovery job that uses the PERSONAL_INFORMATION managed data identifier.
+
+Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect sensitive data in AWS.
+On-Demand Sensitive Data Discovery: Running an on-demand job with the PERSONAL_INFORMATION managed data identifier allows Macie to scan S3 buckets for PHI efficiently without requiring extensive configuration.
+Least Operational Overhead: Macie automates the discovery process, reducing the need for manual intervention and scripting.
+Identify Publicly Accessible S3 Buckets:
+
+E. Enable AWS Security Hub. Use the AWS Foundational Security Best Practices standard. Review the controls dashboard for evidence of failed S3 Block Public Access controls.
+
+AWS Security Hub provides a comprehensive view of your security posture across AWS accounts by aggregating, organizing, and prioritizing security alerts and compliance status.
+AWS Foundational Security Best Practices Standard: This standard includes controls that check for misconfigurations, such as S3 buckets being publicly accessible.
+Evidence Collection: Security Hub aggregates findings, allowing the security team to review and document public access issues easily.
+F. Enable AWS Config. Set up the s3-bucket-public-write-prohibited AWS Config managed rule.
+
+AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources.
+s3-bucket-public-write-prohibited Managed Rule: This rule checks whether your S3 buckets allow public write access. Enabling this rule helps in automatically identifying S3 buckets that do not comply with the company's public access policies.
+Automated Compliance Monitoring: AWS Config continuously monitors and records the configurations, ensuring ongoing compliance and providing audit evidence.
+Collect Evidence for Audit:
+
+Integration of Macie, Security Hub, and Config: By using these services together, the company can automate the discovery of sensitive data, identify public access issues, and continuously monitor compliance.
+Centralized Reporting: Security Hub aggregates findings from Macie and Config, providing a unified dashboard for audit preparation.
+Encrypted Logs and Reports: All findings and logs are stored securely, ensuring that audit evidence is protected and easily accessible.
+
+
+
+
+
+<img width="1121" alt="image" src="https://github.com/user-attachments/assets/6e70bf1c-4ffb-428f-9c89-73b0ca09cac9" />
+CCCCC or DDDDDD
+
+<img width="1121" alt="image" src="https://github.com/user-attachments/assets/712b4ed1-da3f-43eb-ae62-f6c748b6e3a8" />
+
+
+
 2024/12/17
 
 

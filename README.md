@@ -1,5 +1,34 @@
 # AWS_security_specialty
 
+2024/12/21
+
+
+<img width="1117" alt="image" src="https://github.com/user-attachments/assets/a9904b84-0e66-427a-9701-a1ee16c4787a" />
+
+<img width="1115" alt="image" src="https://github.com/user-attachments/assets/2dc7fbd4-e775-46ff-96ca-6b9990c781c6" />
+
+<img width="1108" alt="image" src="https://github.com/user-attachments/assets/74c8d1f0-d62e-447b-835a-66f4ef4d960f" />
+
+
+<img width="1468" alt="image" src="https://github.com/user-attachments/assets/ccd9abdf-0c1f-4573-bef0-51044e60f5ac" />
+
+
+<img width="1111" alt="image" src="https://github.com/user-attachments/assets/25247468-d2ed-42f2-ba1a-543d791e628e" />
+
+
+2024/12/20
+
+<img width="784" alt="image" src="https://github.com/user-attachments/assets/30959046-5c00-40e1-a3ec-fbe513f0812a" />
+
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/f7bede5b-ca8c-49fb-90ce-0124589af7be" />
+
+
+<img width="1486" alt="image" src="https://github.com/user-attachments/assets/915b941d-a513-497c-9f13-3dbbef07f95e" />
+
+
+<img width="971" alt="image" src="https://github.com/user-attachments/assets/eb722024-8d64-413d-86a6-06422cd8888e" />
+
+
 2024/12/18
 
 
